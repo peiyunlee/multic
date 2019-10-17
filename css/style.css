@@ -1,0 +1,19 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+}
+
+/* header */
+header{
+    width:100%;
+    height:100vh;
+    background-image: url(/image/首頁拆件/bg_color.png);
+    position: relative;
+}
+.container_bgobject{
+    position: absolute;
+}
