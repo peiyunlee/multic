@@ -16,4 +16,15 @@ header{
 }
 .container_bgobject{
     position: absolute;
+    width:100%;
+}
+.img_circle_right{
+    right:7.8vw;
+    top:17vh;
+    position: absolute;
+}
+.img_circle_left{
+    position: absolute;
+    left:210px;
+    top:64.8vh;
 }
