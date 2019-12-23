@@ -151,23 +151,27 @@ nav li{
 
 /* header ::content */
 .con_hcenter{
-    height: 510px;
+    width: 81vw;
+    min-width: 645px;
+    height: 26vw;
+    min-height: 240px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: -60px;
 }
 .img_linede{
-    width: 50px;
+    width: 3.2%;
 }
 .con_hccontent{
-    width: 1455px;
-    height: 510px;
+    width: 93.6%;
+    height: 26vw;
+    min-height: 240px;
     border:1px solid white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 .img_rlinede{
     align-self: flex-end;
@@ -177,38 +181,45 @@ nav li{
 }
 .img_hclogo_bg{
     position: absolute;
-    width: 1350px;
+    width: 70.3vw;
+    min-width: 557px;
+    top:480px;
+    transform: translateY(-45%);
 }
-.t_hc{
-    height: 10%;
+.t_hc{    
+    margin-top: 1.75vw;
     font-size: 26px;
     letter-spacing: 3px;
     text-align: center;
 }
 .con_hclogo{
-    width: 745px;
-    height: 90%;
+    margin-top: 6vw;
+    width: 51.3%;
+    min-width: 353px;
+    height: 15vw;
     display: grid;
-    grid-template-rows: 80% auto;
-    grid-row-gap: 20px;
+    grid-template-rows: 75% auto;
+    grid-row-gap: 1.5vw;
     align-items: end;
 }
 .img_hclogo{
-    width: 650px;
+    width: 34vw;
+    min-width: 327px;
 }
 .img_hclogoline{
-    width: 664px;
+    width: 34.58vw;
+    min-width: 350px;
     align-self: start;
     justify-self: end;
 }
 .img_wave{
     position: absolute;
     width: 100%;
-    bottom: 0;
-    transform: translateY(60%);
+    top: 1080px;
+    transform: translateY(-100%);
 }
 .img_harrow{
     position: absolute;
     width: 35px;
-    bottom: -125px;
+    top: 1035px;
 }
