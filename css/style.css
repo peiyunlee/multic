@@ -26,6 +26,9 @@ header{
     width: 100%;
     height: 1080px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .con_bg{
     position: absolute;
@@ -74,14 +77,18 @@ header{
     top: 540px;
     left: 5.72vw;
 }
-.con_headertop{
+.con_htop{
+    position: absolute;
+    top:0;
     width: 100%;
     height: 150px;
-    display: grid;
-    grid-template-columns: 200px auto 300px;
+    display: flex;
+    /* grid-template-columns: 200px auto 300px;
     grid-template-rows: 100%;
+    align-items: center; */
+    justify-content: space-between;
     align-items: center;
-    justify-items: center;
+    padding: 0 5vw;
 }
 .a_logo{
     width: 70px;
@@ -92,6 +99,11 @@ header{
 }
 .img_music{
     width: 40px;
+}
+nav{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 nav,ul{
     display: flex;
@@ -116,14 +128,17 @@ nav li{
     align-items: center;
 }
 .t_on{
-    color: #5A2277;
-    width: 46px;
-    background-color: #fff;
+    width: 55px;
     text-align: center;
+    letter-spacing: 3px;
+}
+.on_current{
+    color: #5A2277;
+    background-color: #fff;
     font-weight: 600;
 }
 .t_off{
-    width: 46px;
+    width: 55px;
     text-align: center;
     letter-spacing: 3px;
 }
@@ -132,4 +147,68 @@ nav li{
     height: 30px;
     background-color: #fff;
     margin:0 15px;
+}
+
+/* header ::content */
+.con_hcenter{
+    height: 510px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -60px;
+}
+.img_linede{
+    width: 50px;
+}
+.con_hccontent{
+    width: 1455px;
+    height: 510px;
+    border:1px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.img_rlinede{
+    align-self: flex-end;
+}
+.img_llinede{
+    align-self: flex-start;
+}
+.img_hclogo_bg{
+    position: absolute;
+    width: 1350px;
+}
+.t_hc{
+    height: 10%;
+    font-size: 26px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+.con_hclogo{
+    width: 745px;
+    height: 90%;
+    display: grid;
+    grid-template-rows: 80% auto;
+    grid-row-gap: 20px;
+    align-items: end;
+}
+.img_hclogo{
+    width: 650px;
+}
+.img_hclogoline{
+    width: 664px;
+    align-self: start;
+    justify-self: end;
+}
+.img_wave{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    transform: translateY(60%);
+}
+.img_harrow{
+    position: absolute;
+    width: 35px;
+    bottom: -125px;
 }
