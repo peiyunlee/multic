@@ -320,7 +320,6 @@ nav li:hover > .box_li{
     }
     .con_hccontent{
         width: 85vw;
-        /* min-width: 285px; */
         height: 26vw;
         min-height: 250px;
     }
