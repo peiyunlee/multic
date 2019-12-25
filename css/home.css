@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap&subset=chinese-traditional');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+html,body{
+    width: 100%;
+    height: auto;
+}
+.wrapper{
+    width: 100%;
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+/* header */
+header{
+    position: relative;
+    width: 100%;
+    height: 1080px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.con_bg{
+    position: absolute;
+    width: 100%;
+    height: 1080px;
+    z-index: -1;
+}
+.img_bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.img_rcircle{
+    position: absolute;
+    width: 12vw;
+    min-width: 135px;
+    top: 185px;
+    right: 7.8vw;
+}
+.img_lcircle{
+    position: absolute;
+    width: 9.37vw;
+    min-width: 115px;
+    top: 710px;
+    left: 10.41vw;
+}
+.img_ccircle{
+    position: absolute;
+    width: 24vw;
+    min-width: 245px;
+    top: 680px;
+    left: 50.5vw;
+}
+.img_rbglogo{
+    position: absolute;
+    width: 15.1vw;
+    min-width: 145px;
+    top: 65px;
+    right: 5vw;
+}
+.img_lbglogo{
+    position: absolute;
+    width: 15.1vw;
+    min-width: 145px;
+    top: 540px;
+    left: 5.72vw;
+}
+.con_htop{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    /* grid-template-columns: 200px auto 300px;
+    grid-template-rows: 100%;
+    align-items: center; */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+}
+.a_logo{
+    width: 70px;
+    height: 70px;
+}
+.img_logo{
+    width: 70px;
+}
+.img_music{
+    width: 40px;
+}
+nav{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+nav,ul{
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    letter-spacing: 3px;
+}
+nav li{
+    position: relative;
+    margin: 0 2.3vw;
+}
+.box_li{
+    position: absolute;
+    border-bottom: 1.5px solid white;
+    width: 0%;
+    height: 100%;
+    margin-top:5px;
+    left: 50%;
+    transition: all .2s;
+    transform:translateX(-50%);
+    z-index: -1;
+}
+nav li:hover > .box_li{
+    width:100%;
+} 
+
+.con_audio{
+    display: grid;
+    grid-template-columns: auto 40px;
+    grid-column-gap: 25px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.con_aucontroller{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+.t_on{
+    width: 55px;
+    text-align: center;
+    letter-spacing: 3px;
+}
+.on_current{
+    color: #5A2277;
+    background-color: #fff;
+    font-weight: 600;
+}
+.t_off{
+    width: 55px;
+    text-align: center;
+    letter-spacing: 3px;
+}
+.h_line{
+    width: 4px;
+    height: 30px;
+    background-color: #fff;
+    margin:0 15px;
+}
+
+/* header ::content */
+.con_hcenter{
+    width: 81vw;
+    min-width: 680px;
+    height: 26vw;
+    min-height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img_linede{
+    width: 3.2%;
+}
+.con_hccontent{
+    position: relative;
+    width: 93.6%;
+    height: 26vw;
+    min-height: 240px;
+    border:1px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.img_rlinede{
+    align-self: flex-end;
+}
+.img_llinede{
+    align-self: flex-start;
+}
+.img_hclogo_bg{
+    position: absolute;
+    width: 70.3vw;
+    min-width: 557px;
+}
+.t_hc{    
+    position: absolute;
+    bottom: 3%;
+    font-size: 26px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+.con_hclogo{
+    width: 51.3%;
+    min-width: 353px;
+    height: 19vw;
+    display: grid;
+    grid-template-rows: 75% auto;
+    align-items: end;
+}
+.img_hclogo{
+    width: 34vw;
+    min-width: 327px;
+}
+.img_hclogoline{
+    width: 34.58vw;
+    min-width: 350px;
+    align-self: center;
+    justify-self: end;
+}
+.img_wave{
+    position: absolute;
+    width: 100%;
+    top: 1080px;
+    transform: translateY(-100%);
+}
+.img_harrow{
+    position: absolute;
+    width: 35px;
+    top: 1035px;
+}
+
+@media screen and (max-width:1280px){
+    nav,ul{
+        font-size: 20px;
+    }
+    .con_audio{
+        grid-column-gap: 20px;
+        font-size: 16px;
+    }
+    .img_music{
+        width: 30px;
+    }
+    .t_on{
+        width: 45px;
+    }
+    .t_off{
+        width: 45px;
+    }
+    .t_hc{    
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width:1024px){
+    .img_rbglogo{
+        top: 240px;
+        right: 5vw;
+    }
+    .img_lbglogo{
+        top: 670px;
+        left: 5.72vw;
+    }
+    .img_rcircle{
+        top: 320px;
+        right: 5vw;
+    }
+    .img_ccircle{
+        top: 750px;
+        left: 58vw;
+    }
+    .con_audio{
+        display: block;
+        margin-right: 20px;
+    }
+    .img_logo{
+        width: 65px;
+    }
+    .con_aucontroller{
+        display: none;
+    }
+    .t_hc{    
+        bottom: -20%;
+        font-size: 22px;
+        font-weight: 300;
+        letter-spacing: 5px;
+    }
+    .img_harrow{
+        width: 30px;
+    }
+}
+
+
+@media screen and (max-width:768px){
+    nav,ul{
+        font-size: 16px;
+    }
+    .t_hc{    
+        font-size: 18px;
+        font-weight: 200;
+    }
+    .img_logo{
+        width: 60px;
+    }
+    .img_music{
+        width: 30px;
+    }
+    .img_wave{
+        display: none;
+    }
+    .img_linede{
+        width: 3.2%;
+    }
+    .con_hccontent{
+        width: 85vw;
+        height: 26vw;
+        min-height: 250px;
+    }
+    .con_hclogo{
+        width: 45.5vw;
+        min-width: 260px;
+        height: 150px;
+    }
+    .img_hclogo{
+        width: 42vw;
+        min-width: 260px;
+    }
+    .img_hclogoline{
+        width: 45.5vw;
+        min-width: 260px;
+    }
+}
+
+
+@media screen and (max-width:480px){
+    nav,ul{
+        display: none;
+    }
+    .con_audio{
+        display: none;
+    }
+    .con_htop{
+        padding: 0 7vw;
+    }
+    .img_logo{
+        width: 55px;
+    }
+    .img_rcircle{
+        width: 90px;
+        top: 80px;
+        right: 35px;
+    }
+    .img_rbglogo{
+        top: 150px;
+    }
+    .img_lcircle{
+        width: 90px;
+        top: 265px;
+        left: 30px;
+    }
+    .t_hc{    
+        font-size: 16px;
+        letter-spacing: 4px;
+    }
+}
+
+@media screen and (max-width:320px){
+    header{
+        height: 812px;
+    }
+    .con_bg{
+        height: 812px;
+    }
+    .con_htop{
+        height: 125px;
+    }
+    .img_logo{
+        width: 40px;
+    }
+    .img_rcircle{
+        width: 90px;
+        min-width: 90px;
+    }
+    .img_lcircle{
+        width: 90px;
+        min-width: 90px;
+        left: 15px;
+        top: 250px
+    }
+    .img_rbglogo{
+        top: 125px;
+        right: -5px;
+    }
+    .img_lbglogo{
+        top: 490px;
+        left: -15px;
+    }
+    .img_ccircle{
+        width: 150px;
+        min-width: 150px;
+        top: 600px;
+        right: -300px;
+    }
+    .con_hccontent{
+        width: 250px;
+        height: 26vw;
+        min-height: 250px;
+    }
+    .con_hclogo{
+        width: 200px;
+        min-width: 200px;
+        height: 100px;
+    }
+    .img_hclogo{
+        width: 200px;
+        min-width: 200px;
+    }
+    .img_hclogoline{
+        width: 200px;
+        min-width: 200px;
+    }
+    .img_hclogo_bg{
+        width: 450px;
+    }
+    .t_hc{    
+        bottom: 15px;
+        font-size: 12px;
+        font-weight: 200;
+    }
+    .img_harrow{
+        top: 770px;
+        width: 25px;
+        min-width: 25px;
+    }
+}
