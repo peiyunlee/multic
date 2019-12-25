@@ -113,8 +113,23 @@ nav,ul{
     letter-spacing: 3px;
 }
 nav li{
+    position: relative;
     margin: 0 2.3vw;
 }
+.box_li{
+    position: absolute;
+    border-bottom: 1.5px solid white;
+    width: 0%;
+    height: 100%;
+    margin-top:5px;
+    left: 50%;
+    transition: all .2s;
+    transform:translateX(-50%);
+    z-index: -1;
+}
+nav li:hover > .box_li{
+    width:100%;
+} 
 
 .con_audio{
     display: grid;
