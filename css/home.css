@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap&subset=chinese-traditional');
-
 *{
     padding: 0;
     margin: 0;
@@ -83,92 +81,6 @@ header{
     top: 540px;
     left: 5.72vw;
 }
-.con_htop{
-    position: absolute;
-    top:0;
-    width: 100%;
-    height: 150px;
-    display: flex;
-    /* grid-template-columns: 200px auto 300px;
-    grid-template-rows: 100%;
-    align-items: center; */
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5vw;
-}
-.a_logo{
-    width: 70px;
-    height: 70px;
-}
-.img_logo{
-    width: 70px;
-}
-.img_music{
-    width: 40px;
-}
-nav{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-nav,nav ul{
-    display: flex;
-    justify-content: center;
-}
-nav li{
-    position: relative;
-    margin: 0 2.3vw;
-    font-size: 24px;
-    letter-spacing: 3px;
-}
-nav .box_li{
-    position: absolute;
-    border-bottom: 1.5px solid white;
-    width: 0%;
-    height: 100%;
-    margin-top:5px;
-    left: 50%;
-    transition: all .2s;
-    transform:translateX(-50%);
-    z-index: -1;
-}
-nav li:hover > .box_li{
-    width:100%;
-} 
-
-.con_audio{
-    display: grid;
-    grid-template-columns: auto 40px;
-    grid-column-gap: 25px;
-    font-size: 20px;
-    font-weight: 500;
-}
-.con_aucontroller{
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-}
-.t_on{
-    width: 55px;
-    text-align: center;
-    letter-spacing: 3px;
-}
-.on_current{
-    color: #5A2277;
-    background-color: #fff;
-    font-weight: 600;
-}
-.t_off{
-    width: 55px;
-    text-align: center;
-    letter-spacing: 3px;
-}
-.h_line{
-    width: 4px;
-    height: 30px;
-    background-color: #fff;
-    margin:0 15px;
-}
 
 /* header ::content */
 .con_hcenter{
@@ -244,22 +156,6 @@ nav li:hover > .box_li{
 }
 
 @media screen and (max-width:1280px){
-    nav,ul{
-        font-size: 20px;
-    }
-    .con_audio{
-        grid-column-gap: 20px;
-        font-size: 16px;
-    }
-    .img_music{
-        width: 30px;
-    }
-    .t_on{
-        width: 45px;
-    }
-    .t_off{
-        width: 45px;
-    }
     .t_hc{    
         font-size: 22px;
     }
@@ -282,16 +178,6 @@ nav li:hover > .box_li{
         top: 750px;
         left: 58vw;
     }
-    .con_audio{
-        display: block;
-        margin-right: 20px;
-    }
-    .img_logo{
-        width: 65px;
-    }
-    .con_aucontroller{
-        display: none;
-    }
     .t_hc{    
         bottom: -20%;
         font-size: 22px;
@@ -305,20 +191,9 @@ nav li:hover > .box_li{
 
 
 @media screen and (max-width:768px){
-    nav li{
-        position: relative;
-        margin: 0 2.3vw;
-        font-size: 18px;
-    }
     .t_hc{    
         font-size: 18px;
         font-weight: 200;
-    }
-    .img_logo{
-        width: 60px;
-    }
-    .img_music{
-        width: 30px;
     }
     .img_wave{
         display: none;
@@ -348,18 +223,6 @@ nav li:hover > .box_li{
 
 
 @media screen and (max-width:480px){
-    nav,ul{
-        display: none;
-    }
-    .con_audio{
-        display: none;
-    }
-    .con_htop{
-        padding: 0 7vw;
-    }
-    .img_logo{
-        width: 55px;
-    }
     .img_rcircle{
         width: 90px;
         top: 80px;
@@ -385,12 +248,6 @@ nav li:hover > .box_li{
     }
     .con_bg{
         height: 812px;
-    }
-    .con_htop{
-        height: 125px;
-    }
-    .img_logo{
-        width: 40px;
     }
     .img_rcircle{
         width: 90px;
@@ -538,24 +395,28 @@ section{
     line-height: 40px;
 }
 .btn_more{
+    display: block;
+    position: relative;
     margin-top: 50px;
     background-color: #fff;
     color: #251D44;
     font-size: 18px;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 3px;
     width: 100px;
+    padding: 4px 0;
+    text-align: center;
     height: 36px;
     border-radius: 50px;
     transition: all .5s;
 }
 .btn_more:hover{
-    font-weight: 500;
-    letter-spacing: 4px;
+    padding: 3px 0;
     border:2px solid white;
     background-color: #251D44;
     color: #fff;
 }
+
 
 .img_city{
     width: 42.5vw;
@@ -715,27 +576,5 @@ section{
 @media screen and (max-width:320px){
     .ar_rs1 {
         margin: 0 0 75px 0;
-    }
-}
-
-footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #251D44;
-}
-.t_footer{
-    margin: 20px;
-    font-size: 14px;
-    letter-spacing: 3px;
-    font-weight: 200;
-}
-
-@media screen and (max-width:480px){
-    .t_footer{
-        margin: 15px;
-        font-size: 12px;
-        letter-spacing: 3px;
-        font-weight: 200;
     }
 }

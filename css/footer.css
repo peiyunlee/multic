@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #251D44;
+}
+.t_footer{
+    margin: 20px;
+    font-size: 14px;
+    letter-spacing: 3px;
+    font-weight: 200;
+}
+
+@media screen and (max-width:480px){
+    .t_footer{
+        margin: 15px;
+        font-size: 12px;
+        letter-spacing: 3px;
+        font-weight: 200;
+    }
+}

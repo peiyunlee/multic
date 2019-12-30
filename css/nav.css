@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap&subset=chinese-traditional');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+button{
+    background-color: rgba(0,0,0,0);
+    border: none;
+}
+
+
+.con_htop{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    /* grid-template-columns: 200px auto 300px;
+    grid-template-rows: 100%;
+    align-items: center; */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+}
+.a_logo{
+    width: 70px;
+    height: 70px;
+}
+.img_logo{
+    width: 70px;
+}
+/* .img_music{
+    width: 40px;
+} */
+nav{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+nav,nav ul{
+    display: flex;
+    justify-content: center;
+}
+nav li{
+    position: relative;
+    margin: 0 2.3vw;
+    font-size: 24px;
+    letter-spacing: 3px;
+}
+nav .box_li{
+    position: absolute;
+    border-bottom: 1.5px solid white;
+    width: 0%;
+    height: 100%;
+    margin-top:5px;
+    left: 50%;
+    transition: all .2s;
+    transform:translateX(-50%);
+    z-index: -1;
+}
+nav li:hover > .box_li{
+    width:100%;
+} 
+.con_link{
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+}
+.img_link{
+    width: 45px;
+}
+/* 
+.con_audio{
+    display: grid;
+    grid-template-columns: auto 40px;
+    grid-column-gap: 25px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.con_aucontroller{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+.t_on{
+    width: 55px;
+    text-align: center;
+    letter-spacing: 3px;
+}
+.on_current{
+    color: #5A2277;
+    background-color: #fff;
+    font-weight: 600;
+}
+.t_off{
+    width: 55px;
+    text-align: center;
+    letter-spacing: 3px;
+}
+.h_line{
+    width: 4px;
+    height: 30px;
+    background-color: #fff;
+    margin:0 15px;
+} */
+
+
+@media screen and (max-width:1280px){
+    nav,ul{
+        font-size: 20px;
+    }
+    /* .con_audio{
+        grid-column-gap: 20px;
+        font-size: 16px;
+    }
+    .img_music{
+        width: 30px;
+    }
+    .t_on{
+        width: 45px;
+    }
+    .t_off{
+        width: 45px;
+    } */
+}
+
+
+
+@media screen and (max-width:1024px){
+    .con_link{
+        width: 90px;
+    }
+    .img_link{
+        width: 35px;
+    }
+    /* .con_audio{
+        display: block;
+        margin-right: 20px;
+    } */
+    .img_logo{
+        width: 65px;
+    }
+    /* .con_aucontroller{
+        display: none;
+    } */
+}
+
+
+@media screen and (max-width:768px){
+    nav li{
+        position: relative;
+        margin: 0 2.3vw;
+        font-size: 18px;
+    }
+    .img_logo{
+        width: 60px;
+    }
+    .con_link{
+        width: 9vw;
+        min-width: 62px;
+    }
+    .img_link{
+        width: 25px;
+    }
+    /* .img_music{
+        width: 30px;
+    } */
+}
+
+
+@media screen and (max-width:480px){
+    nav,ul{
+        display: none;
+    }
+    .con_link{
+        display: none;
+    }
+    /* .con_audio{
+        display: none;
+    } */
+    .con_htop{
+        padding: 0 7vw;
+    }
+    .img_logo{
+        width: 55px;
+    }
+}
+
+@media screen and (max-width:320px){
+    .con_htop{
+        height: 125px;
+    }
+    .img_logo{
+        width: 40px;
+    }
+}
