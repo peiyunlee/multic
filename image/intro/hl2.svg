@@ -1,1 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34" height="28" viewBox="0 0 34 28"><defs><style>.a{fill:none;stroke:#707070;}.b{clip-path:url(#a);}.c{fill:#08d9d6;}</style><clipPath id="a"><rect class="a" width="34" height="28" transform="translate(146.5 772.25)"/></clipPath></defs><g class="b" transform="translate(-146.5 -772.25)"><g transform="translate(19.381 16.279)"><circle class="c" cx="4.5" cy="4.5" r="4.5" transform="translate(131.619 758.721)"/><circle class="c" cx="4.5" cy="4.5" r="4.5" transform="translate(131.619 772.721)"/><circle class="c" cx="4.5" cy="4.5" r="4.5" transform="translate(147.619 758.721)"/><circle class="c" cx="4.5" cy="4.5" r="4.5" transform="translate(147.619 772.721)"/></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34" height="28" viewBox="0 0 34 28">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_223" data-name="Rectangle 223" width="34" height="28" transform="translate(146.25 772)" fill="none" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_15" data-name="Mask Group 15" transform="translate(-146.25 -772)" clip-path="url(#clip-path)">
+    <g id="Group_575" data-name="Group 575" transform="translate(19.381 16.279)">
+      <circle id="Ellipse_1405" data-name="Ellipse 1405" cx="4.5" cy="4.5" r="4.5" transform="translate(131.619 758.721)" fill="#08d9d6"/>
+      <circle id="Ellipse_1407" data-name="Ellipse 1407" cx="4.5" cy="4.5" r="4.5" transform="translate(131.619 772.721)" fill="#08d9d6"/>
+      <circle id="Ellipse_1406" data-name="Ellipse 1406" cx="4.5" cy="4.5" r="4.5" transform="translate(147.619 758.721)" fill="#08d9d6"/>
+      <circle id="Ellipse_1408" data-name="Ellipse 1408" cx="4.5" cy="4.5" r="4.5" transform="translate(147.619 772.721)" fill="#08d9d6"/>
+    </g>
+  </g>
+</svg>
