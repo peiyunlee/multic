@@ -26,18 +26,18 @@ button{
     width: 100%;
     height: 150px;
     display: flex;
-    /* grid-template-columns: 200px auto 300px;
-    grid-template-rows: 100%;
-    align-items: center; */
+    z-index: 10;
     justify-content: space-between;
     align-items: center;
     padding: 0 5vw;
 }
 .a_logo{
+    cursor: pointer;
     width: 70px;
     height: 70px;
 }
 .img_logo{
+    cursor: pointer;
     width: 70px;
 }
 /* .img_music{
