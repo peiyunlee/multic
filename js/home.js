@@ -10,93 +10,36 @@ $(document).ready(function () {
 
     //list
     let current = 1
+    let color = ["#FF5C85","#D33E40","#258EBA","#C04893","#A2CEDB"]
 
     $('#btn_right').click(function () {
         $("#li"+current).removeClass("list_current");
+        $("#content"+current).removeClass("c_current");
+        $("#tcm"+current).removeClass("tcm_current");
+        $("#city"+current).removeClass("city_current");
         current++
         if(current == 6) current = 1
         $("#li"+current).addClass("list_current");
+        $("#content"+current).addClass("c_current");
+        $("#tcm"+current).addClass("tcm_current");
+        $("#city"+current).addClass("city_current");
+        $(".bg_triangle").css("border-color","transparent transparent "+color[current-1]+" transparent")
     })
 
     $('#btn_left').click(function () {
         $("#li"+current).removeClass("list_current");
+        $("#content"+current).removeClass("c_current");
+        $("#tcm"+current).removeClass("tcm_current");
+        $("#city"+current).removeClass("city_current");
         current--
         if(current == 0) current = 5
         $("#li"+current).addClass("list_current");
+        $("#content"+current).addClass("c_current");
+        $("#tcm"+current).addClass("tcm_current");
+        $("#city"+current).addClass("city_current");
+        $(".bg_triangle").css("border-color","transparent transparent "+color[current-1]+" transparent")
     })
 })
-
-
-
-// 	var left=0;
-// 	var right=0;
-
-// 	$('#btn_left').click(function () {
-// 		if(left<0)left=0-left;
-
-// 		$("#list"+(right)%5).removeClass("rtoleft2");
-// 		$("#box_cname"+(right+2)%5).removeClass("box_cname_center");
-// 		$("#list"+(right+1)%5).removeClass("rtoleft1");
-// 		$("#list"+(right+2)%5).removeClass("rtocenter");
-// 		$("#list"+(right+3)%5).removeClass("rtoright1");
-// 		$("#list"+(right-1)%5).removeClass("rtoright2");
-
-
-// 		$("#list"+(left)%5).removeClass("ltoleft2");
-// 		$("#list"+(left)%5).addClass("ltoright2");
-
-// 		$("#list"+(left+1)%5).removeClass("ltoleft1");
-// 		$("#list"+(left+1)%5).addClass("ltoleft2");
-
-// 		$("#list"+(left+2)%5).removeClass("ltocenter");
-// 		$("#list"+(left+2)%5).addClass("ltoleft1");
-// 		$("#box_cname"+(left+2)%5).removeClass("box_cname_center");
-
-// 		$("#list"+(left+3)%5).removeClass("ltoright1");
-// 		$("#list"+(left+3)%5).addClass("ltocenter");
-// 		$("#box_cname"+(left+3)%5).addClass("box_cname_center");
-
-// 		$("#list"+(left+4)%5).removeClass("ltoright2");
-// 		$("#list"+(left+4)%5).addClass("ltoright1");
-
-// 		right+=6;
-// 		left++;
-// 		console.log(right)
-// 		console.log(left)
-// 	});
-
-// 	$('#btn_right').click(function () {
-// 		if(right<0)right=0-right;
-// 		$("#list"+(left)%5).removeClass("ltoleft2");
-// 		$("#list"+(left+1)%5).removeClass("ltoleft1");
-// 		$("#list"+(left+2)%5).removeClass("ltocenter");
-// 		$("#box_cname"+(left+2)%5).removeClass("box_cname_center");
-// 		$("#list"+(left+3)%5).removeClass("ltoright1");
-// 		$("#list"+(left+4)%5).removeClass("ltoright2");
-
-
-// 		$("#list"+(right)%5).removeClass("rtoleft2");
-// 		$("#box_cname"+(right+2)%5).removeClass("box_cname_center");
-// 		$("#list"+(right)%5).addClass("rtoleft1");
-
-// 		$("#list"+(right+1)%5).removeClass("rtoleft1");
-// 		$("#list"+(right+1)%5).addClass("rtocenter");
-// 		$("#box_cname"+(right+1)%5).addClass("box_cname_center");
-
-// 		$("#list"+(right+2)%5).removeClass("rtocenter");
-// 		$("#list"+(right+2)%5).addClass("rtoright1");
-
-// 		$("#list"+(right+3)%5).removeClass("rtoright1");
-// 		$("#list"+(right+3)%5).addClass("rtoright2");
-
-// 		$("#list"+(right-1)%5).removeClass("rtoright2");
-// 		$("#list"+(right+4)%5).addClass("rtoleft2");
-
-// 		right+=4;
-// 		left+=4;
-// 		console.log(right)
-// 		console.log(left)
-// 	});
 
 
 // 	///////////////////////////////////// ScrollMagic

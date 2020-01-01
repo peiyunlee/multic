@@ -533,8 +533,13 @@ section{
     fill: #FF2E63;
 }
 .img_city{
+    position: relative;
     width: 700px;
     z-index: 1;
+    opacity: 0;
+}
+.city_current{
+    opacity: 1;
 }
 .t_city{
     position: absolute;
@@ -569,6 +574,10 @@ section{
 .img_exclusion{
     width: 60px;
     cursor: pointer;
+}
+#btn_sec2scroll{
+    cursor: pointer;
+    z-index: 11;
 }
 
 .con_sidenav{
@@ -1049,15 +1058,22 @@ section{
 .con_music_top>.t_music,.con_music_top>.t_number{
     color:#fff;
 }
-.svg_play{
+.svg_aucontrol{
     margin-left: 30px;
     cursor: pointer;
 }
-.svg_play > path{
+.svg_aucontrol > path{
     fill:#FF5680;
 }
-.con_music_top >.svg_play > path{
+.con_music_top >.svg_aucontrol > path,.con_music_top >.svg_aucontrol rect{
     fill:#fff;
+}
+
+.btn_play{
+    display: block;
+}
+.btn_pause{
+    display: none;
 }
 
 /* bg */
@@ -1241,10 +1257,10 @@ section{
     .con_music_top>.t_music,.con_music_top>.t_number{
         color:#FF5680;
     }
-    .con_music_top >.svg_play > path{
+    .con_music_top >.svg_aucontrol > path{
         fill:#FF5680;
     }
-    .svg_play{
+    .svg_aucontrol{
         margin-left: 20px;
         width: 15px;
     }
@@ -1394,7 +1410,7 @@ section{
         letter-spacing: 1px;
         color:#FF5680;
     }
-    .svg_play{
+    .svg_aucontrol{
         margin-left: 20px;
         width: 15px;
     }
@@ -1450,4 +1466,8 @@ section{
         width: 18px;
         display: block;
     }
+}
+
+.positionab{
+    position: absolute;
 }
