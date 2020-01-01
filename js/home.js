@@ -1,11 +1,32 @@
-// $(document).ready(function () {
+$(document).ready(function () {
 
-// 	/////////////////////////////////////// clickscroll
-// 	$('#hbottom').click(function () {
-// 		$('html,body').animate({
-// 			scrollTop: $('#sec_story').offset().top
-// 		}, 1000);
-// 	});
+    $('#btn_hscroll').click(function () {
+        $('html,body').animate({
+            scrollTop: $('#section1').offset().top
+        }, 1000);
+        console.log("aa");
+    });
+
+
+    //list
+    let current = 1
+
+    $('#btn_right').click(function () {
+        $("#li"+current).removeClass("list_current");
+        current++
+        if(current == 6) current = 1
+        $("#li"+current).addClass("list_current");
+    })
+
+    $('#btn_left').click(function () {
+        $("#li"+current).removeClass("list_current");
+        current--
+        if(current == 0) current = 5
+        $("#li"+current).addClass("list_current");
+    })
+})
+
+
 
 // 	var left=0;
 // 	var right=0;
@@ -67,7 +88,7 @@
 
 // 		$("#list"+(right+3)%5).removeClass("rtoright1");
 // 		$("#list"+(right+3)%5).addClass("rtoright2");
-		
+
 // 		$("#list"+(right-1)%5).removeClass("rtoright2");
 // 		$("#list"+(right+4)%5).addClass("rtoleft2");
 
@@ -203,4 +224,4 @@
 // 			rect = $('#sec_character')[0].getBoundingClientRect();
 // 		  })
 // 	});
-// });
+// })

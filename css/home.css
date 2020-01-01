@@ -381,10 +381,16 @@ section{
 .con_lcontents1{
     margin-top:40px;
 }
+.positionab{
+    position: absolute;
+}
 .con_lcontents1 h3{
-    width: 300px;
+    width: 400px;
     font-size: 40px;
     letter-spacing: 5px;
+}
+#hl3{
+    width: 300px;
 }
 .t_ls1{
     margin-top:40px;
@@ -504,7 +510,7 @@ section{
         letter-spacing: 3px;
     }
     .con_lcontents1 h3{
-        width: 300px;
+        width: 400px;
         font-size: 38px;
     }
     .btn_more{
@@ -554,7 +560,7 @@ section{
         letter-spacing: 2px;
     }
     .con_lcontents1 h3{
-        width: 200px;
+        width: 250px;
         font-size: 26px;
         letter-spacing: 3px;
     }
