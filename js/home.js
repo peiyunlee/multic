@@ -14,12 +14,14 @@ $(document).ready(function () {
 
     $('#btn_right').click(function () {
         $("#li"+current).removeClass("list_current");
+        $("#li"+current).css("border","none")
         $("#content"+current).removeClass("c_current");
         $("#tcm"+current).removeClass("tcm_current");
         $("#city"+current).removeClass("city_current");
         current++
         if(current == 6) current = 1
         $("#li"+current).addClass("list_current");
+        $("#li"+current).css("border","1.5px solid "+color[current-1])
         $("#content"+current).addClass("c_current");
         $("#tcm"+current).addClass("tcm_current");
         $("#city"+current).addClass("city_current");
@@ -28,12 +30,14 @@ $(document).ready(function () {
 
     $('#btn_left').click(function () {
         $("#li"+current).removeClass("list_current");
+        $("#li"+current).css("border","none")
         $("#content"+current).removeClass("c_current");
         $("#tcm"+current).removeClass("tcm_current");
         $("#city"+current).removeClass("city_current");
         current--
         if(current == 0) current = 5
         $("#li"+current).addClass("list_current");
+        $("#li"+current).css("border","1.5px solid "+color[current-1])
         $("#content"+current).addClass("c_current");
         $("#tcm"+current).addClass("tcm_current");
         $("#city"+current).addClass("city_current");

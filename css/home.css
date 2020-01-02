@@ -359,7 +359,6 @@ section{
     letter-spacing: 3px;
     font-weight: 300;
     margin-top: 8px;
-    cursor: pointer;
 }
 .ar_ls1 li{
     position: relative;
@@ -373,9 +372,6 @@ section{
     transform:translateX(-50%);
 }
 .ar_ls1 .list_current{
-    width: 100%;
-}
-.ar_ls1 li:hover > .box_li{
     width: 100%;
 }
 .con_lcontents1{
@@ -491,7 +487,6 @@ section{
         letter-spacing: 3px;
         font-weight: 300;
         margin-top: 8px;
-        cursor: pointer;
     }
     .con_lcontents1{
         margin-top:20px;

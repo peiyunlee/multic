@@ -491,11 +491,12 @@ section{
     justify-content: center;
     align-items: center;
 }
-.box_s1headline h4{
+.s1h4 {
+    opacity: 0;
     font-size: 28px;
     font-weight: 500;
-    letter-spacing: 10px;
-    text-align: center;
+    letter-spacing: 5px;
+    text-align: justify;
 }
 .svg_s1greenbox{
     position: absolute;
@@ -549,6 +550,20 @@ section{
     top:0;
     text-align: center;
     width: 715px;
+    opacity: 0;
+}
+.t_cityrock{
+    width: 1050px;
+}
+.t_citycountry{
+    top:-30px;
+    width: 1050px;
+    line-height: 300px;
+}
+.t_cityhiphop{
+    top:-30px;
+    width: 1050px;
+    line-height: 300px;
 }
 
 .con_scroll{
@@ -607,6 +622,7 @@ section{
 .img_tbox{
     position: absolute;
     width: 260px;
+    opacity: 0;
 }
 .img_ttbox{
     top:0;
@@ -615,6 +631,9 @@ section{
 .img_btbox{
     bottom:0;
     transform: rotate(0deg);
+}
+.tbox_current{
+    opacity: 1;
 }
 
 .con_btns1{
@@ -654,6 +673,19 @@ section{
         top:auto;
         transform: translateY(-25%);
         width: 50vw;
+    }
+    .t_cityrock{
+        width: 70vw;
+    }
+    .t_citycountry{
+        top:150px;
+        width: 70vw;
+        line-height: 150px;
+    }
+    .t_cityhiphop{
+        top:150px;
+        width: 70vw;
+        line-height: 150px;
     }
     .con_sidenav{
         display: none;
@@ -735,7 +767,7 @@ section{
         width: 175px;
         height: 70px;
     }
-    .box_s1headline h4{
+    .s1h4{
         font-size: 18px;
     }
     .svg_s1greenbox{
@@ -743,6 +775,9 @@ section{
     }
 }
 @media screen and (max-width:768px){
+    .section1{
+        height: 1100px;
+    }
     .box_s1crt{
         width: 45px;
         height: 45px;
@@ -791,8 +826,8 @@ section{
 }
 @media screen and (max-width:320px){
     .section1{
-        height: 695px;
-        padding: 120px 0 0 0;
+        height: 600px;
+        padding: 90px 0 0 0;
     }
     .box_s1clt{
         left: 8px;
@@ -868,6 +903,26 @@ section{
         top:75px;
         width: 195px;
     }
+    .t_cityrock{
+        width: 260px;
+        letter-spacing: 10px;
+    }
+    .t_citycountry{
+        top:50px;
+        width: 280px;
+        line-height: 80px;
+    }
+    .t_citycountry{
+        top:50px;
+        width: 280px;
+        line-height: 80px;
+    }
+    .t_cityhiphop{
+        top:40px;
+        width: 220px;
+        line-height: 80px;
+        letter-spacing: 18px;
+    }
     .con_s1headline{
         position: relative;
         width: 150px;
@@ -880,10 +935,11 @@ section{
         width: 95px;
         height: 35px;
     }
-    .box_s1headline h4{
-        width: 50px;
+    .s1h4{
+        width: 70px;
         font-size: 12px;
-        text-align: justify;
+        letter-spacing: 2px;
+        text-align: center;
     }
     .svg_s1greenbox{
         width: 35px;
@@ -934,6 +990,10 @@ section{
     height: 135px;
     display: flex;
     align-items: center;
+    opacity: 0;
+}
+.s2hl_current{
+    opacity: 1;
 }
 .t_s2hl{
     position: relative;
@@ -972,8 +1032,12 @@ section{
 .t_s2lhl2{
     color: #FF5680;
 }
+.ar_s2l-2,.ar_s2l-1{
+    position: relative;
+}
 .con_s2arlp{
-    padding: 20px 0 0 40px;
+    padding: 20px 0px 0 40px;
+    opacity: 0;
 }
 .con_s2arlp > p{
     font-size: 18px;
@@ -989,12 +1053,14 @@ section{
 /* articlecenter */
 .con_represent{
     margin: 80px 0 0 15px;
+    opacity: 0;
 }
 .img_represent{
     position: absolute;
     height: 100%;
     right: 0;
     z-index: -1;
+    opacity: 0;
 }
 .img_represent_s{
     display: none;
@@ -1092,6 +1158,10 @@ section{
     letter-spacing: 10px;
     font-weight: 600;
     color: #FF5C85;
+    opacity: 0;
+}
+.t_current{
+    opacity: 1;
 }
 .svg_bgcross{
     position: absolute;
@@ -1265,7 +1335,6 @@ section{
         width: 15px;
     }
     /* bg */
-    
     .t_bg{
         position: absolute;
         bottom:-130px;
@@ -1310,16 +1379,20 @@ section{
     .ar_s2l{
         padding: 80px 0 0 40px;
     }
+    .con_s2hl{
+        height: 90px;
+    }
     .t_s2hl{
         position: relative;
         display: inline-block;
-        font-size: 54px;
+        font-size: 35px;
         font-weight: 600;
-        letter-spacing: 10px;
-        line-height: 85px;
+        letter-spacing: 5px;
+        line-height: 60px;
     }
     .svg_s2greenbox{
-        width: 60px;
+        margin-bottom: -15px;
+        width: 35px;
     }
     .con_s2arlhl{
         display: flex;
@@ -1470,4 +1543,11 @@ section{
 
 .positionab{
     position: absolute;
+}
+
+audio{
+    display: none;
+}
+.represent_current{
+    opacity: 1;
 }
