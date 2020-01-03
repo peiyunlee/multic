@@ -32,7 +32,10 @@ $(document).ready(function () {
     let maincolor = ["#FF2E63","#CB2433","#20799F","#B5008D","#229DCB"]
     let circlecolor = ["#0FD5D3","#FFFFFF","#DFE780","#ED6900","#00FF01"]
     // let seccolor = ["#08D9D6","#000000","#DFE780","#ED6900","#00FF01"]
-
+    
+    // //anim
+    TweenLite.to(".img_playbox", 2.5,{ease: "power2.in", y: "+=750px",x: "-=1500px" });
+    
     $('#btn_right').click(function () {
         
         //sidenav
@@ -43,6 +46,7 @@ $(document).ready(function () {
         TweenLite.to(".t_nav_anim3", 0.5, {
             y: "-=107.5px"
         });
+
 
         new TimelineMax()
         .to('.t_nav_anim2',0.2,{ opacity: "0" })
@@ -225,8 +229,10 @@ $(document).ready(function () {
 
     //music
     var audio = []
-    for (var i = 0; i < 14; i++) {
+    for (var i = 0; i < 14; i+=3) {
         audio[i] = new Audio('../Maroon 5 - Sugar_cut.mp3')
+        audio[i+1] = new Audio('../think.mp3')
+        audio[i+2] = new Audio('../havana.mp3')
     }
 
 
