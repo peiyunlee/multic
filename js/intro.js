@@ -34,36 +34,6 @@ $(document).ready(function () {
     // let seccolor = ["#08D9D6","#000000","#DFE780","#ED6900","#00FF01"]
 
     $('#btn_right').click(function () {
-        
-        //sidenav
-        TweenLite.to(".t_nav_anim1", 0.5, {
-            y: "-=107.5px"
-        });
-
-        TweenLite.to(".t_nav_anim3", 0.5, {
-            y: "-=107.5px"
-        });
-
-        new TimelineMax()
-        .to('.t_nav_anim2',0.2,{ opacity: "0" })
-        .to('.t_nav_anim2',0,{ y: "+=430px"})
-        .to('.t_nav_anim2',0.2,{ opacity: "1"})
-
-        $(".t_nav_anim2").removeClass("t_nav_anim2")
-        $(".t_nav_anim3").addClass("t_nav_anim1")
-        $(".t_nav_anim3").removeClass("t_nav_anim3")
-        $("#t_nav"+current).addClass("t_nav_anim3")
-        if(current==5){
-            $("#t_nav"+1).removeClass("t_nav_anim1")
-            $("#t_nav"+1).addClass("t_nav_anim2")
-        }
-        else{
-            k=current+1
-            $("#t_nav"+k).removeClass("t_nav_anim1")
-            $("#t_nav"+k).addClass("t_nav_anim2")
-        }
-
-        //change
         $("#city"+current).removeClass("city_current")
         $("#ttbox"+current).removeClass("tbox_current")
         $("#tbbox"+current).removeClass("tbox_current")
@@ -103,7 +73,6 @@ $(document).ready(function () {
         $(".bgcorss").css("fill",bgcolor[current-1])
         $(".t_bg").css("color",bgcolor[current-1])
         $("#btn_s2scroll_s").css("fill",bgcolor[current-1])
-        $(".icon_color1").css("fill","#fff")
         if(document.body.clientWidth <= 768){
             $(".t_color1").css("color",bgcolor[current-1])
             $(".icon_color1").css("fill",bgcolor[current-1])
@@ -125,12 +94,9 @@ $(document).ready(function () {
             $(".greenbox").css("fill",circlecolor[current-1])
             $(".c").css("fill",circlecolor[current-1])
         }
-
     })
 
     $('#btn_left').click(function () {
-
-        //change
         $("#city"+current).removeClass("city_current")
         $("#ttbox"+current).removeClass("tbox_current")
         $("#tbbox"+current).removeClass("tbox_current")
@@ -170,11 +136,11 @@ $(document).ready(function () {
         $(".bgcorss").css("fill",bgcolor[current-1])
         $(".t_bg").css("color",bgcolor[current-1])
         $("#btn_s2scroll_s").css("fill",bgcolor[current-1])
-        $(".icon_color1").css("fill","#fff")
         if(document.body.clientWidth <= 768){
             $(".t_color1").css("color",bgcolor[current-1])
             $(".icon_color1").css("fill",bgcolor[current-1])
             $(".t_s2rhl").css("color",bgcolor[current-1])
+            $("#pausetop").css("fill",bgcolor[current-1])
         }
         if(document.body.clientWidth <=320){
             $(".t_s2scroll").css("color",bgcolor[current-1])
@@ -193,35 +159,8 @@ $(document).ready(function () {
             $(".greenbox").css("fill",circlecolor[current-1])
             $(".c").css("fill",circlecolor[current-1])
         }
-
-        //sidenav
-        TweenLite.to(".t_nav_anim1", 0.5, {
-            y: "+=107.5px"
-        });
-
-        TweenLite.to(".t_nav_anim2", 0.5, {
-            y: "+=107.5px"
-        });
-
-        new TimelineMax()
-            .to('.t_nav_anim3',0.2,{ opacity: "0" })
-            .to('.t_nav_anim3',0,{ y: "-=430px"})
-            .to('.t_nav_anim3',0.2,{ opacity: "1"})
-
-        $(".t_nav_anim3").removeClass("t_nav_anim3")
-        $(".t_nav_anim2").addClass("t_nav_anim1")
-        $(".t_nav_anim2").removeClass("t_nav_anim2")
-        $("#t_nav"+current).addClass("t_nav_anim2")
-        if(current==1){
-            $("#t_nav"+5).removeClass("t_nav_anim1")
-            $("#t_nav"+5).addClass("t_nav_anim3")
-        }
-        else{
-            k=current-1
-            $("#t_nav"+k).removeClass("t_nav_anim1")
-            $("#t_nav"+k).addClass("t_nav_anim3")
-        }
     })
+
 
     //music
     var audio = []
