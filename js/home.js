@@ -3,7 +3,7 @@ $(document).ready(function () {
     $('#btn_hscroll').click(function () {
         $('html,body').animate({
             scrollTop: $('#section1').offset().top
-        }, 1000);
+        },1000);
         console.log("aa");
     });
 
@@ -70,12 +70,12 @@ $(document).ready(function () {
     new ScrollMagic.Scene({
 		triggerElement: '#section1',
         offset: 450,
-    }).setClassToggle('.t_ls1', 'p_anim').addIndicators().addTo(controller).reverse(false);
+    }).setClassToggle('.t_ls1','p_anim').addIndicators().addTo(controller).reverse(false);
     
     new ScrollMagic.Scene({
 		triggerElement: '#section1',
         offset: 450,
-	}).setClassToggle('.con_lcontents1_h3', 'hl_anim').addIndicators().addTo(controller).reverse(false);
+	}).setClassToggle('.con_lcontents1_h3','hl_anim').addIndicators().addTo(controller).reverse(false);
 
 
 })

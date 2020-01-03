@@ -160,7 +160,6 @@ header{
     width: 33.85vw;
     min-width: 390px;
     z-index: 0;
-    transform: translate(1500px,-750px);
 }
 .con_hccontent{
     position: relative;
@@ -1562,4 +1561,32 @@ audio{
 }
 .represent_current{
     opacity: 1;
+}
+
+
+.img_playbox{
+    opacity: 0;
+    transform: translate(1500px,-750px);
+}
+.img_cbg,.con_genre,.con_hccontent,.img_topcg,.img_crossgroup{
+    opacity: 0;
+}
+.img_cbg,.box_s1c{
+    animation: cbgmove 1s linear 0s infinite alternate-reverse;
+}
+
+
+@keyframes cbgmove{
+    from{transform: translateY(-12.5px);}
+    to{transform: translateY(12.5px);}
+}
+
+.box_s1c,.con_ltcgroup,.con_rbcgroup,#city1,#t_city1,.svg_citycross{
+    opacity: 0;
+}
+/* .con_s1content{
+    opacity: 0;
+} */
+.con_s1headline{
+    opacity: 0;
 }
