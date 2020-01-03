@@ -34,9 +34,18 @@ $(document).ready(function () {
     // let seccolor = ["#08D9D6","#000000","#DFE780","#ED6900","#00FF01"]
     
     // //anim
-    TweenLite.to(".img_playbox", 2.5,{ease: "power2.in", y: "+=750px",x: "-=1500px" });
+    TweenLite.to(".img_playbox", 2,{ease: "power2.in", y: "+=750px",x: "-=1500px",opacity:"1" });
+    
+    TweenLite.to(".img_cbg", 0.3,{delay:2.75 , ease: "none",opacity:"1" });
+    TweenLite.to(".con_hccontent", 0.25,{delay:1.75 , ease: "none",opacity:"1" });
+    TweenLite.to(".con_genre", 0.3,{delay:2 , ease: "power1.in",opacity:"1" });
+    TweenLite.to(".img_crossgroup",  0.3,{delay:2 , ease: "power1.in",opacity:"1" });
+    TweenLite.to(".img_topcg", 0.3,{delay:2 , ease: "power1.in",opacity:"1" });
     
     $('#btn_right').click(function () {
+
+        $("#city"+current).css("opacity","0")
+        $("#t_city"+current).css("opacity","0")
         
         //sidenav
         TweenLite.to(".t_nav_anim1", 0.5, {
@@ -46,7 +55,6 @@ $(document).ready(function () {
         TweenLite.to(".t_nav_anim3", 0.5, {
             y: "-=107.5px"
         });
-
 
         new TimelineMax()
         .to('.t_nav_anim2',0.2,{ opacity: "0" })
@@ -130,9 +138,37 @@ $(document).ready(function () {
             $(".c").css("fill",circlecolor[current-1])
         }
 
+        
+        new TimelineMax()
+        .to(".svg_citycross", 0.5, {
+            y: "30px",scaleX:0.95, scaleY:0.95,opacity:"0"
+        })
+        .to(".svg_citycross", 1, {
+            y: "0px",scaleX:1, scaleY:1,opacity:"1"
+        })
+
+        new TimelineMax()
+        .to("#city"+current, 0, {
+            opacity:"0"
+        })
+        .to("#city"+current, 0.5, {
+            delay:0.75,
+            opacity:"1",ease:"power2.in"
+        })
+        new TimelineMax()
+        .to("#t_city"+current, 0, {
+            opacity:"0"
+        })
+        .to("#t_city"+current, 0.5, {
+            delay:1.25,
+            opacity:"1",ease:"power2.in"
+        })
     })
 
     $('#btn_left').click(function () {
+
+        $("#city"+current).css("opacity","0")
+        $("#t_city"+current).css("opacity","0")
 
         //change
         $("#city"+current).removeClass("city_current")
@@ -225,6 +261,32 @@ $(document).ready(function () {
             $("#t_nav"+k).removeClass("t_nav_anim1")
             $("#t_nav"+k).addClass("t_nav_anim3")
         }
+
+        
+        new TimelineMax()
+        .to(".svg_citycross", 0.5, {
+            y: "30px",scaleX:0.95, scaleY:0.95,opacity:"0"
+        })
+        .to(".svg_citycross", 1, {
+            y: "0px",scaleX:1, scaleY:1,opacity:"1"
+        })
+
+        new TimelineMax()
+        .to("#city"+current, 0, {
+            opacity:"0"
+        })
+        .to("#city"+current, 0.5, {
+            delay:0.75,
+            opacity:"1",ease:"power2.in"
+        })
+        new TimelineMax()
+        .to("#t_city"+current, 0, {
+            opacity:"0"
+        })
+        .to("#t_city"+current, 0.5, {
+            delay:1.25,
+            opacity:"1",ease:"power2.in"
+        })
     })
 
     //music
@@ -269,136 +331,57 @@ $(document).ready(function () {
         $('#btn_pause3').css("display", "none")
     })
 
-    // $('#btn_play4').click(function () {
-    //     audio[3].play()
-    //     $('#btn_pause4').css("display", "block")
-    //     $('#btn_play4').css("display", "none")
+
+    ///////////////////////////////////// ScrollMagic
+	var controller = new ScrollMagic.Controller();
+
+    let sec1_anim=new TimelineMax()
+    .to(".con_s1headline", 0.5, {
+        opacity:"1"
+    })
+    .to(".box_s1c", 0.5, {
+        opacity:"0.4"
+    })
+    .to(".svg_citycross", 0.5, {
+        y: "30px",scaleX:0.95, scaleY:0.95,opacity:"0"
+    })
+    .to(".svg_citycross", 1, {
+        y: "0px",scaleX:1, scaleY:1,opacity:"1"
+    })
+    .to("#city1", 0, {
+        opacity:"0"
+    })
+    .to("#city1", 0.5, {
+        opacity:"1",ease:"power2.in"
+    })
+    .to("#t_city1", 0, {
+        opacity:"0"
+    })
+    .to("#t_city1", 0.5, {
+        opacity:"1",ease:"power2.in"
+    })
+    // .to(".con_s1content", 0.25, {
+    //     y: "30px",scaleX:0.95, scaleY:0.95,opacity:"0"
     // })
-    // $('#btn_pause4').click(function () {
-    //     audio[3].pause()
-    //     $('#btn_play4').css("display", "block")
-    //     $('#btn_pause4').css("display", "none")
+    // .to(".con_s1content", 1, {
+    //     y: "0px",scaleX:1, scaleY:1,opacity:"1"
+    // })
+    // .to(".con_s1content", 0.25, {
+    //     y: "30px",scaleX:0.95, scaleY:0.95,opacity:"0"
+    // })
+    // .to(".con_s1content", 1, {
+    //     y: "0px",scaleX:1, scaleY:1,opacity:"1"
+    // })        new TimelineMax()
+    // .to(".svg_citycross", 0.5, {
+    //     y: "30px",scaleX:0.95, scaleY:0.95,opacity:"0"
+    // })
+    // .to(".svg_citycross", 1, {
+    //     y: "0px",scaleX:1, scaleY:1,opacity:"1"
     // })
 
-    // $('#btn_play5').click(function () {
-    //     audio[4].play()
-    //     $('#btn_pause5').css("display", "block")
-    //     $('#btn_play5').css("display", "none")
-    // })
-    // $('#btn_pause5').click(function () {
-    //     audio[4].pause()
-    //     $('#btn_play5').css("display", "block")
-    //     $('#btn_pause5').css("display", "none")
-    // })
-
-    // $('#btn_play6').click(function () {
-    //     audio[5].play()
-    //     $('#btn_pause6').css("display", "block")
-    //     $('#btn_play6').css("display", "none")
-    // })
-    // $('#btn_pause6').click(function () {
-    //     audio[5].pause()
-    //     $('#btn_play6').css("display", "block")
-    //     $('#btn_pause6').css("display", "none")
-    // })
-
-    // $('#btn_play7').click(function () {
-    //     audio[6].play()
-    //     $('#btn_pause7').css("display", "block")
-    //     $('#btn_play7').css("display", "none")
-    // })
-    // $('#btn_pause7').click(function () {
-    //     audio[6].pause()
-    //     $('#btn_play7').css("display", "block")
-    //     $('#btn_pause7').css("display", "none")
-    // })
-
-    // $('#btn_play8').click(function () {
-    //     audio[7].play()
-    //     $('#btn_pause8').css("display", "block")
-    //     $('#btn_play8').css("display", "none")
-    // })
-    // $('#btn_pause8').click(function () {
-    //     audio[7].pause()
-    //     $('#btn_play8').css("display", "block")
-    //     $('#btn_pause8').css("display", "none")
-    // })
-
-    // $('#btn_play9').click(function () {
-    //     audio[8].play()
-    //     $('#btn_pause9').css("display", "block")
-    //     $('#btn_play9').css("display", "none")
-    // })
-    // $('#btn_pause9').click(function () {
-    //     audio[8].pause()
-    //     $('#btn_play9').css("display", "block")
-    //     $('#btn_pause9').css("display", "none")
-    // })
-
-    // $('#btn_play10').click(function () {
-    //     audio[9].play()
-    //     $('#btn_pause10').css("display", "block")
-    //     $('#btn_play10').css("display", "none")
-    // })
-    // $('#btn_pause10').click(function () {
-    //     audio[9].pause()
-    //     $('#btn_play10').css("display", "block")
-    //     $('#btn_pause10').css("display", "none")
-    // })
-
-    // $('#btn_play11').click(function () {
-    //     audio[10].play()
-    //     $('#btn_pause11').css("display", "block")
-    //     $('#btn_play11').css("display", "none")
-    // })
-    // $('#btn_pause11').click(function () {
-    //     audio[10].pause()
-    //     $('#btn_play11').css("display", "block")
-    //     $('#btn_pause11').css("display", "none")
-    // })
-
-    // $('#btn_play12').click(function () {
-    //     audio[11].play()
-    //     $('#btn_pause12').css("display", "block")
-    //     $('#btn_play12').css("display", "none")
-    // })
-    // $('#btn_pause12').click(function () {
-    //     audio[11].pause()
-    //     $('#btn_play12').css("display", "block")
-    //     $('#btn_pause12').css("display", "none")
-    // })
-
-    // $('#btn_play13').click(function () {
-    //     audio[12].play()
-    //     $('#btn_pause13').css("display", "block")
-    //     $('#btn_play13').css("display", "none")
-    // })
-    // $('#btn_pause13').click(function () {
-    //     audio[12].pause()
-    //     $('#btn_play13').css("display", "block")
-    //     $('#btn_pause13').css("display", "none")
-    // })
-
-    // $('#btn_play14').click(function () {
-    //     audio[13].play()
-    //     $('#btn_pause14').css("display", "block")
-    //     $('#btn_play14').css("display", "none")
-    // })
-    // $('#btn_pause14').click(function () {
-    //     audio[13].pause()
-    //     $('#btn_play14').css("display", "block")
-    //     $('#btn_pause14').css("display", "none")
-    // })
-
-    // $('#btn_play15').click(function () {
-    //     audio[14].play()
-    //     $('#btn_pause15').css("display", "block")
-    //     $('#btn_play15').css("display", "none")
-    // })
-    // $('#btn_pause15').click(function () {
-    //     audio[14].pause()
-    //     $('#btn_play15').css("display", "block")
-    //     $('#btn_pause15').css("display", "none")
-    // })
+    new ScrollMagic.Scene({
+		triggerElement: '#section1',
+        offset: 450,
+    }).setTween(sec1_anim).addIndicators().addTo(controller).reverse(false);
 
 })
