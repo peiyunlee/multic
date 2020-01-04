@@ -622,9 +622,12 @@ section{
 .ar_rs1{
     opacity: 0;
 }
-.con_lcontents1 h3,.t_ls1,.btn_more{
+.con_lcontents1 h3,.t_ls1{
     opacity: 1;
     transform: translateY(450px);
+}
+.btn_more{
+    opacity: 1;
 }
 .hl_anim{
     animation: showup3 0.75s ease-in-out 0.5s 1;
