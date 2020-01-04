@@ -1568,6 +1568,18 @@ audio{
     opacity: 0;
     transform: translate(1500px,-750px);
 }
+@media screen and (max-width:768px){
+    .img_playbox{
+        transform: translate(750px,-750px);
+    }
+
+}
+@media screen and (max-width:320px){
+    .img_playbox{
+        transform: translate(400px,-400px);
+    }
+
+}
 .img_cbg,.con_genre,.con_hccontent,.img_topcg,.img_crossgroup{
     opacity: 0;
 }
@@ -1584,9 +1596,34 @@ audio{
 .box_s1c,.con_ltcgroup,.con_rbcgroup,#city1,#t_city1,.svg_citycross{
     opacity: 0;
 }
-/* .con_s1content{
-    opacity: 0;
-} */
 .con_s1headline{
     opacity: 0;
 }
+#represent1{
+    opacity: 0;
+}
+.img_represent_s{
+    opacity: 0;
+}
+.con_represent{
+    opacity: 0;
+}
+.con_s2hl{
+    transform: translateX(-100%);
+    opacity: 0;
+}
+.ar_s2l-1,.ar_s2l-2{
+    opacity: 0;
+}
+.ar_s2r{
+    transform: translateX(200%);
+    opacity: 0;
+}
+@media screen and (max-width:768px)
+{
+    .ar_s2r{
+        transform: translateX(-200%);
+    }
+
+}
+.con_btns1{display:none}

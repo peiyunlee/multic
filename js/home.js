@@ -1,3 +1,7 @@
+// 待辦
+// nav320
+// nav320
+
 $(document).ready(function () {
 
     $('#btn_hscroll').click(function () {
@@ -61,21 +65,38 @@ $(document).ready(function () {
 	///////////////////////////////////// ScrollMagic
 	var controller = new ScrollMagic.Controller();
 
-    new ScrollMagic.Scene({
-		triggerElement: '#section1',
-        offset: 450,
-    }).setTween(city_anim).addIndicators().addTo(controller).reverse(false);
+    if(document.body.clientWidth <= 768){
+        new ScrollMagic.Scene({
+            triggerElement: '#section1',
+            offset: 200,
+        }).setTween(city_anim).addTo(controller).reverse(false);
+        new ScrollMagic.Scene({
+            triggerElement: '#section1',
+            offset: 200,
+        }).setClassToggle('.t_ls1','p_anim').addTo(controller).reverse(false);
+        
+        new ScrollMagic.Scene({
+            triggerElement: '#section1',
+            offset: 200,
+        }).setClassToggle('.con_lcontents1_h3','hl_anim').addTo(controller).reverse(false);
+    }
+    else {
+        new ScrollMagic.Scene({
+            triggerElement: '#section1',
+            offset: 300,
+        }).setTween(city_anim).addIndicators().addTo(controller).reverse(false);
+        new ScrollMagic.Scene({
+            triggerElement: '#section1',
+            offset: 300,
+        }).setClassToggle('.t_ls1','p_anim').addIndicators().addTo(controller).reverse(false);
+        
+        new ScrollMagic.Scene({
+            triggerElement: '#section1',
+            offset: 300,
+        }).setClassToggle('.con_lcontents1_h3','hl_anim').addIndicators().addTo(controller).reverse(false);
+    }
     
     
-    new ScrollMagic.Scene({
-		triggerElement: '#section1',
-        offset: 450,
-    }).setClassToggle('.t_ls1','p_anim').addIndicators().addTo(controller).reverse(false);
-    
-    new ScrollMagic.Scene({
-		triggerElement: '#section1',
-        offset: 450,
-	}).setClassToggle('.con_lcontents1_h3','hl_anim').addIndicators().addTo(controller).reverse(false);
 
 
 })
