@@ -16,16 +16,30 @@
     <script src="../js/scrollmagic/minified/ScrollMagic.min.js"></script>
     <script src="../js/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
 
-    <!-- <script src="../js/gsap/gsap.min.js"></script>
+    <script src="../js/gsap/gsap.min.js"></script>
     <script src="../js/gsap/animation.gsap.min.js"></script>
-    <script src="../js/gsap/TimelineMax.min.js"></script> -->
+    <script src="../js/gsap/TimelineMax.min.js"></script>
 
-    <script src="../js/intro.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/discover.js"></script>
 </head>
 
 <body>
     <div class="wrapper">
         <header>
+            <img class="img_bg" src="../image/discover/colorbg.png" alt="">
+            <img class="img_bglogo" src="../image/discover/multic_bg.png" alt="">
+            <img class="img_bgcd" src="../image/discover/cd.png" alt="">
+            <img class="img_bg img_bgfluid_l" src="../image/discover/fluid_l.png" alt="">
+            <img class="img_bg img_bgfluid_m" src="../image/discover/fluid_m.png" alt="">
+            <img class="img_bg img_bgfluid_s" src="../image/discover/fluid_s.png" alt="">
+            <img class="img_cross img_lcross" src="../image/discover/crossgroup.png" alt="">
+            <img class="img_cross img_rcross" src="../image/discover/crossgroup.png" alt="">
+            <div class="con_discover">
+                <div class="t_discover">
+                    DISCOVER
+                </div>
+            </div>
             <div class="con_htop">
                 <a class="a_logo" href="../index.html">
                     <img class="img_logo" src="../image/home/nav_logo.png" alt="">
@@ -34,7 +48,7 @@
                     <ul>
                         <li>
                             <div class="box_li"></div>
-                            <a href="">INTRO</a>
+                            <a href="intro.html">INTRO</a>
                         </li>
                         <li>
                             <div class="box_li"></div>
@@ -56,20 +70,344 @@
                 </div>
             </div>
             <img id="btn_hscroll" class="img_harrow" src="../image/home/arrow.png" alt="">
+            <div id="s_nav1" class="s_nav">
+                <div class="con_sntop">
+                    <ul>
+                        <img class="img_navlinede img_rnavlinede" src="image/home/linede.png" alt="">
+                        <li>
+                            <div class="box_li"></div>
+                            <a href="pages/intro.html">INTRO</a>
+                        </li>
+                        <li>
+                            <div class="box_li"></div>
+                            <a href="">DISCOVER</a>
+                        </li>
+                        <li>
+                            <div class="box_li"></div>
+                            <a href="">LISTEN</a>
+                        </li>
+                    </ul>
+                    <img class="img_navlinede img_lnavlinede" src="image/home/linede.png" alt="">
+                </div>
+                <div class="line_sn"></div>
+                <div class="con_snlink">
+                    <a class="a_link" href="">
+                        <img class="img_link" src="image/home/icon_fb.png" alt="">
+                    </a>
+                    <a class="a_link" href="">
+                        <img class="img_link" src="image/home/icon_ins.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div id="con_navbar1" class="con_navbar con_navbar1">
+                <input id="hamberger1" class="hamberger1" type="checkbox">
+                <span></span>
+                <span></span>
+            </div>
         </header>
         <section id="section1" class="section1">
-        </section>
-            <!-- <div class="con_scroll con_s2scroll">
-                <img id="btn_sec2scroll" class="img_exclusion img_s2exclusion" src="../image/intro/Exclusion.png"
+            <article class="ar_s1">
+                <div class="con_hl">
+                    <img class="img_hlbg" src="../image/discover/hl_bg.png" alt="">
+                    <img class="img_hllogo" src="../image/discover/hl.png" alt="">
+                    <div class="t_recommend">recommend</div>
+                </div>
+                <ul>
+                    <li id="li1">
+                        <div id="box1" class="box_li"></div>
+                        <div class="t_li">ALL</div>
+                    </li>
+                    <li id="li2">
+                        <div id="box2" class="box_li"></div>
+                        <div class="t_li">POP</div>
+                    </li>
+                    <li id="li3">
+                        <div id="box3" class="box_li"></div>
+                        <div class="t_li">ROCK</div>
+                    </li>
+                    <li id="li4">
+                        <div id="box4" class="box_li"></div>
+                        <div class="t_li">COUNTRY</div>
+                    </li>
+                    <li id="li5">
+                        <div id="box5" class="box_li"></div>
+                        <div class="t_li">HIP HOP</div>
+                    </li>
+                    <li id="li6">
+                        <div id="box6" class="box_li"></div>
+                        <div class="t_li">EDM</div>
+                    </li>
+                </ul>
+                <div id="s1c1" class="con_s1content">
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/Group 807@2x.png" alt="">
+                        <div class="t_name">V</div>
+                        <div class="t_singer">MAROON 5</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/pop1@2x.png" alt="">
+                        <div class="t_name">Don't Smile At Me</div>
+                        <div class="t_singer">Belllie ellish</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/pop2@2x.png" alt="">
+                        <div class="t_name">Harley in hawaii</div>
+                        <div class="t_singer">Katy Perry</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/pop4@2x.png" alt="">
+                        <div class="t_name">Divide</div>
+                        <div class="t_singer">Ed Shreen</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/71RfNE3rIyL._AC_SL1500_@2x.png" alt="">
+                        <div class="t_name">Lover</div>
+                        <div class="t_singer">Taylor Swift</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/rock@2x.png" alt="">
+                        <div class="t_name">人生×僕=</div>
+                        <div class="t_singer">ONE OK ROCK</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/rock2@2x.png" alt="">
+                        <div class="t_name">Avril Lavigne</div>
+                        <div class="t_singer">Avril Lavigne</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/2-1@2x.png" alt="">
+                        <div class="t_name">Hybrid Theory</div>
+                        <div class="t_singer">LINKIN PARK</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/paramore_after_.b96bd083314.original@2x.png" alt="">
+                        <div class="t_name">After Laughter</div>
+                        <div class="t_singer">Paramore</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/500x500@2x.png" alt="">
+                        <div class="t_name">Fallen</div>
+                        <div class="t_singer">Evanescence</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/81z0lq9nIrL._SL1500_@2x.png" alt="">
+                        <div class="t_name">This One's for You Too</div>
+                        <div class="t_singer">Luke Combs</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/91BrCPHPlzL._SL1500_@2x.png" alt="">
+                        <div class="t_name">Golden Hour</div>
+                        <div class="t_singer">Kacey Musgraves</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/csiac-cover@2x.png" alt="">
+                        <div class="t_name">Can't say I ain't country</div>
+                        <div class="t_singer">Florida Georgia Line</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/71OULShN8bL._SL1200_@2x.png" alt="">
+                        <div class="t_name">Ocean</div>
+                        <div class="t_singer">Lady Antebellum</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/carrie-underwood-cry-pretty-album-capitol-nashville@2x.png" alt="">
+                        <div class="t_name">Cry Pretty</div>
+                        <div class="t_singer">Carrie Underwood</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/Group 751@2x.png" alt="">
+                        <div class="t_name">廢物</div>
+                        <div class="t_singer">MC HotDog</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/Today-in-Hip-Hop-History-Jay-Z-Drops-His-Landmark-The-Blueprint-Album-18-Years-Ago@2x.png" alt="">
+                        <div class="t_name">The Blueprint</div>
+                        <div class="t_singer">JAY-Z</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/runyo6@2x.png" alt="">
+                        <div class="t_name">The marshall mathers lp 2</div>
+                        <div class="t_singer">EMINEM</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/queen-nicki-minaj@2x.png" alt="">
+                        <div class="t_name">Queen</div>
+                        <div class="t_singer">Nicki Minaj</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/9f92b837efe7107322fffb59f4699068@2x.png" alt="">
+                        <div class="t_name">Invasion of Privacy</div>
+                        <div class="t_singer">CARDI B</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/I5aGb2e@2x.png" alt="">
+                        <div class="t_name">All along</div>
+                        <div class="t_singer">Alan Walker</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/81dlzB1g+WL._SL1500_@2x.png" alt="">
+                        <div class="t_name">Cosmic Explorer</div>
+                        <div class="t_singer">perfume</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/ampjk9dyz6g11@2x.png" alt="">
+                        <div class="t_name">Happier</div>
+                        <div class="t_singer">Marshmello</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/500x500@2x.png" alt="">
+                        <div class="t_name">Experience</div>
+                        <div class="t_singer">The Martin 
+                            Garrix</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/Group 763@2x.png" alt="">
+                        <div class="t_name">TIM</div>
+                        <div class="t_singer">Avicii</div>
+                    </div>
+                </div>
+                <div id="s1c2" class="con_s1content">
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/Group 807@2x.png" alt="">
+                        <div class="t_name">V</div>
+                        <div class="t_singer">MAROON 5</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/pop1@2x.png" alt="">
+                        <div class="t_name">Don't Smile At Me</div>
+                        <div class="t_singer">Belllie ellish</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/pop2@2x.png" alt="">
+                        <div class="t_name">Harley in hawaii</div>
+                        <div class="t_singer">Katy Perry</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/pop4@2x.png" alt="">
+                        <div class="t_name">Divide</div>
+                        <div class="t_singer">Ed Shreen</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/71RfNE3rIyL._AC_SL1500_@2x.png" alt="">
+                        <div class="t_name">Lover</div>
+                        <div class="t_singer">Taylor Swift</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/rock2@2x.png" alt="">
+                        <div class="t_name">Avril Lavigne</div>
+                        <div class="t_singer">Avril Lavigne</div>
+                    </div>
+                </div>
+                <div id="s1c3" class="con_s1content">
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/rock@2x.png" alt="">
+                        <div class="t_name">人生×僕=</div>
+                        <div class="t_singer">ONE OK ROCK</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/2-1@2x.png" alt="">
+                        <div class="t_name">Hybrid Theory</div>
+                        <div class="t_singer">LINKIN PARK</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/paramore_after_.b96bd083314.original@2x.png" alt="">
+                        <div class="t_name">After Laughter</div>
+                        <div class="t_singer">Paramore</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/500x500@2x.png" alt="">
+                        <div class="t_name">Fallen</div>
+                        <div class="t_singer">Evanescence</div>
+                    </div>
+                </div>
+                <div id="s1c4" class="con_s1content">
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/81z0lq9nIrL._SL1500_@2x.png" alt="">
+                        <div class="t_name">This One's for You Too</div>
+                        <div class="t_singer">Luke Combs</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/91BrCPHPlzL._SL1500_@2x.png" alt="">
+                        <div class="t_name">Golden Hour</div>
+                        <div class="t_singer">Kacey Musgraves</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/csiac-cover@2x.png" alt="">
+                        <div class="t_name">Can't say I ain't country</div>
+                        <div class="t_singer">Florida Georgia Line</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/71OULShN8bL._SL1200_@2x.png" alt="">
+                        <div class="t_name">Ocean</div>
+                        <div class="t_singer">Lady Antebellum</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/carrie-underwood-cry-pretty-album-capitol-nashville@2x.png" alt="">
+                        <div class="t_name">Cry Pretty</div>
+                        <div class="t_singer">Carrie Underwood</div>
+                    </div>
+                </div>
+                <div id="s1c5" class="con_s1content">
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/Group 751@2x.png" alt="">
+                        <div class="t_name">廢物</div>
+                        <div class="t_singer">MC HotDog</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/Today-in-Hip-Hop-History-Jay-Z-Drops-His-Landmark-The-Blueprint-Album-18-Years-Ago@2x.png" alt="">
+                        <div class="t_name">The Blueprint</div>
+                        <div class="t_singer">JAY-Z</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/runyo6@2x.png" alt="">
+                        <div class="t_name">The marshall mathers lp 2</div>
+                        <div class="t_singer">EMINEM</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/queen-nicki-minaj@2x.png" alt="">
+                        <div class="t_name">Queen</div>
+                        <div class="t_singer">Nicki Minaj</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/9f92b837efe7107322fffb59f4699068@2x.png" alt="">
+                        <div class="t_name">Invasion of Privacy</div>
+                        <div class="t_singer">CARDI B</div>
+                    </div>
+                </div>
+                <div id="s1c6" class="con_s1content">
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/I5aGb2e@2x.png" alt="">
+                        <div class="t_name">All along</div>
+                        <div class="t_singer">Alan Walker</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/81dlzB1g+WL._SL1500_@2x.png" alt="">
+                        <div class="t_name">Cosmic Explorer</div>
+                        <div class="t_singer">perfume</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/ampjk9dyz6g11@2x.png" alt="">
+                        <div class="t_name">Happier</div>
+                        <div class="t_singer">Marshmello</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/500x500@2x.png" alt="">
+                        <div class="t_name">Experience</div>
+                        <div class="t_singer">The Martin 
+                            Garrix</div>
+                    </div>
+                    <div class="con_album">
+                        <img class="img_cover" src="../image/discover/cover/Group 763@2x.png" alt="">
+                        <div class="t_name">TIM</div>
+                        <div class="t_singer">Avicii</div>
+                    </div>
+                </div>
+            </article>
+            <div class="con_scroll con_scroll">
+                <img id="btn_secscroll" class="img_exclusion img_s2exclusion" src="../image/discover/exclusion.png"
                     alt="">
-                <div class="t_scroll t_s2scroll">TOP</div>
-                <svg id="btn_sec2scroll2" class="svg_exclusion" xmlns="http://www.w3.org/2000/svg" width="13"
-                    height="13" viewBox="0 0 13 13">
-                    <path id="btn_s2scroll_s" data-name="Exclusion 1"
-                        d="M13,13H0V0H13V13ZM2.583,3.836h0L1.492,5.286,6.567,9.1,11.6,5.281,10.5,3.837,6.561,6.83,2.583,3.836Z"
-                        transform="translate(13 13) rotate(180)" fill="#ff5c85" />
-                </svg>
-            </div> -->
+                <div class="t_scroll">TOP</div>
+            </div>
         </section>
         <footer>
             <div class="t_footer">Multic Production team</div>
