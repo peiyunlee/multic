@@ -16,6 +16,7 @@ $(document).ready(function() {
         openingAnim.play();
     }
     window.onload = function() {
+        console.log('2')
         openingAnim.playSegments([0, 41], true);
         $('#load').css('display', 'none');
     };
