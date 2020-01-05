@@ -6,7 +6,7 @@ $(document).ready(function() {
         loop: true,
         prerender: true,
         autoplay: false,
-        path: '../json/cubeloading.json'
+        path: 'https://assets9.lottiefiles.com/packages/lf20_NXiHkw.json'
     };
     // set bodymovin
     let openingAnim = bodymovin.loadAnimation(openingAnimData);
