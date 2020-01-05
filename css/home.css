@@ -10,6 +10,7 @@ html,body{
     height: auto;
 }
 .wrapper{
+    overflow: hidden;
     width: 100%;
     z-index: -10;
 }
@@ -323,6 +324,7 @@ section{
     top:30px;
 }
 .ar_ls1{
+    opacity: 0;
     margin:0 0 0 10vw;
     min-width: 500px;
     height: auto;
@@ -424,10 +426,6 @@ section{
     margin-bottom: 20px;
     position: absolute;
     opacity: 0;
-}
-.city_current{
-    position: relative;
-    opacity: 1;
 }
 .con_btns1{
     position: absolute;
@@ -602,4 +600,57 @@ section{
 
 .positionab{
     position: absolute;
+}
+
+
+
+
+.img_wave{
+    transform: translateY(100%);
+    animation: showup2 0.75s ease-in-out 0.25s 1;
+    animation-fill-mode: forwards;
+}
+.city_current{
+    opacity: 1;
+    transform: translateY(-10px);
+    position: relative;
+    animation: citymove 1s linear 0s infinite alternate-reverse;
+}
+#content1{
+    overflow: hidden;
+}
+.ar_rs1{
+    opacity: 0;
+}
+.con_lcontents1 h3,.t_ls1{
+    opacity: 1;
+    transform: translateY(450px);
+}
+.btn_more{
+    opacity: 1;
+}
+.hl_anim{
+    animation: showup3 0.75s ease-in-out 0.5s 1;
+    animation-fill-mode: forwards;
+}
+.p_anim{
+    animation: showup3 0.5s linear 1.25s 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes showup2{
+    from{transform: translateY(0%);opacity: 0;}
+    to{transform: translateY(-100%);opacity: 1;}
+}
+@keyframes showup3{
+    from{transform: translateX(-450px);opacity: 0;}
+    to{transform: translateX(0);opacity: 1;}
+}
+@keyframes showup4{
+    from{transform: translateY(100%);opacity: 0;}
+    to{transform: translateY(0);opacity: 1;}
+}
+@keyframes citymove{
+    from{transform: translateY(-10px);}
+    to{transform: translateY(10px);}
 }

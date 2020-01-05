@@ -205,3 +205,15 @@ nav li:hover > .box_li{
         width: 40px;
     }
 }
+
+
+.con_htop{
+    opacity: 0;
+    transform: translateY(0%);
+    animation: showup1 0.75s ease-in-out 0.25s 1;
+    animation-fill-mode: forwards;
+}
+@keyframes showup1{
+    from{transform: translateY(-100%);opacity: 0;}
+    to{transform: translateY(0%);opacity: 1;}
+}

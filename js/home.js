@@ -1,9 +1,13 @@
+// 待辦
+// nav320
+// nav320
+
 $(document).ready(function () {
 
     $('#btn_hscroll').click(function () {
         $('html,body').animate({
             scrollTop: $('#section1').offset().top
-        }, 1000);
+        },1000);
         console.log("aa");
     });
 
@@ -11,8 +15,17 @@ $(document).ready(function () {
     //list
     let current = 1
     let color = ["#FF5C85","#D33E40","#258EBA","#C04893","#A2CEDB"]
+    
+    //anim
+    let city_anim = new TimelineMax()
+        .to('.ar',0.75,{ opacity: "1",ease: "power2.inOut"} )
 
     $('#btn_right').click(function () {
+        //anim
+        new TimelineMax()
+        .to('.ar_rs1',0,{ opacity: "0" })
+        .to('.ar_rs1',0.75,{ opacity: "1" })
+
         $("#li"+current).removeClass("list_current");
         $("#li"+current).css("border","none")
         $("#content"+current).removeClass("c_current");
@@ -29,6 +42,11 @@ $(document).ready(function () {
     })
 
     $('#btn_left').click(function () {
+        //anim
+        new TimelineMax()
+        .to('.ar_rs1',0,{ opacity: "0" })
+        .to('.ar_rs1',0.75,{ opacity: "1" })
+
         $("#li"+current).removeClass("list_current");
         $("#li"+current).css("border","none")
         $("#content"+current).removeClass("c_current");
@@ -43,132 +61,42 @@ $(document).ready(function () {
         $("#city"+current).addClass("city_current");
         $(".bg_triangle").css("border-color","transparent transparent "+color[current-1]+" transparent")
     })
+
+	///////////////////////////////////// ScrollMagic
+	var controller = new ScrollMagic.Controller();
+
+    if(document.body.clientWidth <= 768){
+        new ScrollMagic.Scene({
+            triggerElement: '#section1',
+            offset: 200,
+        }).setTween(city_anim).addTo(controller).reverse(false);
+        new ScrollMagic.Scene({
+            triggerElement: '#section1',
+            offset: 200,
+        }).setClassToggle('.t_ls1','p_anim').addTo(controller).reverse(false);
+        
+        new ScrollMagic.Scene({
+            triggerElement: '#section1',
+            offset: 200,
+        }).setClassToggle('.con_lcontents1_h3','hl_anim').addTo(controller).reverse(false);
+    }
+    else {
+        new ScrollMagic.Scene({
+            triggerElement: '#section1',
+            offset: 300,
+        }).setTween(city_anim).addIndicators().addTo(controller).reverse(false);
+        new ScrollMagic.Scene({
+            triggerElement: '#section1',
+            offset: 300,
+        }).setClassToggle('.t_ls1','p_anim').addIndicators().addTo(controller).reverse(false);
+        
+        new ScrollMagic.Scene({
+            triggerElement: '#section1',
+            offset: 300,
+        }).setClassToggle('.con_lcontents1_h3','hl_anim').addIndicators().addTo(controller).reverse(false);
+    }
+    
+    
+
+
 })
-
-
-// 	///////////////////////////////////// ScrollMagic
-// 	var controller = new ScrollMagic.Controller();
-
-// 	new ScrollMagic.Scene({
-// 		triggerElement: "#sec_story",
-// 		offset: 100,
-// 	}).setClassToggle("#nav", "nav_bgcolor1").addTo(controller);
-
-// 	new ScrollMagic.Scene({
-// 		triggerElement: "#sec_play",
-// 		offset: 100,
-// 	}).setClassToggle("#nav", "nav_bgcolor2").addTo(controller);
-
-
-// 	// anim
-// 	new ScrollMagic.Scene({
-// 		triggerElement: "#sec_story",
-// 		offset: 100,
-// 	}).setClassToggle(".ar_sl", "showtoup1").reverse(false).addTo(controller);
-
-// 	new ScrollMagic.Scene({
-// 		triggerElement: "#sec_character",
-// 		offset: 100,
-// 	}).setClassToggle(".con_cheader", "showtoup2").reverse(false).addTo(controller);
-
-// 	new ScrollMagic.Scene({
-// 		triggerElement: "#sec_character",
-// 		offset: 100,
-// 	}).setClassToggle(".con_ccontent", "showup").reverse(false).addTo(controller);
-
-// 	new ScrollMagic.Scene({
-// 		triggerElement: "#sec_play",
-// 		offset: 100,
-// 	}).setClassToggle(".ar_pl", "showtoup1").reverse(false).addTo(controller);
-
-// 	new ScrollMagic.Scene({
-// 		triggerElement: "#sec_play",
-// 		offset: 100,
-// 	}).setClassToggle(".p_prp", "showtoright1").reverse(false).addTo(controller);
-
-// 	new ScrollMagic.Scene({
-// 		triggerElement: "#sec_play",
-// 		offset: 100,
-// 	}).setClassToggle("#box_prc1", "showtoright2").reverse(false).addTo(controller);
-
-// 	new ScrollMagic.Scene({
-// 		triggerElement: "#sec_play",
-// 		offset: 100,
-// 	}).setClassToggle("#box_prc2", "showtoright3").reverse(false).addTo(controller);
-
-// 	new ScrollMagic.Scene({
-// 		triggerElement: "#sec_play",
-// 		offset: 100,
-// 	}).setClassToggle("#box_prc3", "showtoright4").reverse(false).addTo(controller);
-
-// 	new ScrollMagic.Scene({
-// 		triggerElement: "#sec_play",
-// 		offset: 100,
-// 	}).setClassToggle(".a_prahref", "showtoright5").reverse(false).addTo(controller);
-
-// 	/////////////////////////////////////rock with mouse move
-
-// 	var rockScene1 = new ScrollMagic.Scene({
-// 		triggerElement: "#sec_story",
-// 		offset: 100,
-// 	}).addTo(controller);
-
-// 	rockScene1.on("enter", function (event) {
-
-// 		//rock with mouse move
-// 		var rect = $('#sec_story')[0].getBoundingClientRect();
-// 		var mouse = { x: 0, y: 0, moved: false };
-// 		$("#sec_story").mousemove(function (e) {
-// 			mouse.moved = true;
-// 			mouse.x = e.clientX - rect.left;
-// 			mouse.y = e.clientY - rect.top;
-// 		});
-// 		TweenLite.ticker.addEventListener('tick', function () {
-// 			if (mouse.moved) {
-// 				parallaxIt(".img_sbganim", -150);
-// 			}
-// 			mouse.moved = false;
-// 		});
-// 		function parallaxIt(target, movement) {
-// 			TweenMax.to(target, 0.3, {
-// 				x: (mouse.x - rect.width / 2) / rect.width * movement - rect.width / 2.5,
-// 				y: (mouse.y - rect.height / 2) / rect.height * movement - rect.height / 5
-// 			});
-// 		}
-// 		$(window).on('resize scroll', function(){
-// 			rect = $('#sec_story')[0].getBoundingClientRect();
-// 		  })
-// 	});
-
-// 	var rockScene2 = new ScrollMagic.Scene({
-// 		triggerElement: "#sec_character",
-// 		offset: 100,
-// 	}).addTo(controller);
-
-// 	rockScene2.on("enter", function (event) {
-
-// 		//rock with mouse move
-// 		var rect = $('#sec_character')[0].getBoundingClientRect();
-// 		var mouse = { x: 0, y: 0, moved: false };
-// 		$("#sec_character").mousemove(function (e) {
-// 			mouse.moved = true;
-// 			mouse.x = e.clientX - rect.left;
-// 			mouse.y = e.clientY - rect.top;
-// 		});
-// 		TweenLite.ticker.addEventListener('tick', function () {
-// 			if (mouse.moved) {
-// 				parallaxIt(".img_cbganim", -150);
-// 			}
-// 			mouse.moved = false;
-// 		});
-// 		function parallaxIt(target, movement) {
-// 			TweenMax.to(target, 0.3, {
-// 				x: (mouse.x - rect.width / 2) / rect.width * movement - rect.width / 2.5,
-// 				y: (mouse.y - rect.height / 2) / rect.height * movement - rect.height / 6
-// 			});
-// 		}
-// 		$(window).on('resize scroll', function(){
-// 			rect = $('#sec_character')[0].getBoundingClientRect();
-// 		  })
-// 	});
-// })

@@ -1,3 +1,6 @@
+// 待辦
+// 320動畫trigger se1 (sec2)下來一點
+
 $(document).ready(function () {
 
     $('#btn_hscroll').click(function () {
@@ -32,8 +35,48 @@ $(document).ready(function () {
     let maincolor = ["#FF2E63","#CB2433","#20799F","#B5008D","#229DCB"]
     let circlecolor = ["#0FD5D3","#FFFFFF","#DFE780","#ED6900","#00FF01"]
     // let seccolor = ["#08D9D6","#000000","#DFE780","#ED6900","#00FF01"]
+    
+    // //anim
+    TweenLite.to(".img_playbox", 2,{ease: "power2.in", y: "0px",x: "0px",opacity:"1" });
+    
+    TweenLite.to(".img_cbg", 0.3,{delay:2.5 , ease: "none",opacity:"1" });
+    TweenLite.to(".con_hccontent", 0.25,{delay:1.75 , ease: "none",opacity:"1" });
+    TweenLite.to(".con_genre", 0.3,{delay:2 , ease: "power1.in",opacity:"1" });
+    TweenLite.to(".img_crossgroup",  0.3,{delay:2 , ease: "power1.in",opacity:"1" });
+    TweenLite.to(".img_topcg", 0.3,{delay:2 , ease: "power1.in",opacity:"1" });
+    
+
+
+    function cityfinish() {
+        $(".con_btns1").css("display","flex")
+    }
 
     $('#btn_right').click(function () {
+
+        TweenLite.to("#s2hl"+current, 0, {
+            x:"-100%",opacity:"0"
+        })
+        
+        if(document.body.clientWidth <= 768){
+            TweenLite.to(".ar_s2r", 0, {
+                x:"-200%",opacity:"0"
+            })
+        }
+        else{
+            TweenLite.to(".ar_s2r", 0, {
+                x:"100%",opacity:"0"
+            })
+        }
+
+        $(".ar_s2l-1").css("opacity","0")
+        $(".ar_s2l-2").css("opacity","0")
+
+        $(".con_btns1").css("display","none")
+        $("#con_re"+current).css("opacity","0")
+        $("#represent"+current).css("opacity","0")
+        $("#represent_s_"+current).css("opacity","0")
+        $("#city"+current).css("opacity","0")
+        $("#t_city"+current).css("opacity","0")
         
         //sidenav
         TweenLite.to(".t_nav_anim1", 0.5, {
@@ -81,11 +124,11 @@ $(document).ready(function () {
         $("#city"+current).addClass("city_current")
         $("#ttbox"+current).addClass("tbox_current")
         $("#tbbox"+current).addClass("tbox_current")
-        $("#represent"+current).addClass("represent_current")
+        // $("#represent"+current).addClass("represent_current")
         $("#represent_s_"+current).addClass("represent_current")
         $("#t_bg"+current).addClass("t_current")
-        $("#s2hl"+current).addClass("s2hl_current")
-        $("#con_re"+current).addClass("represent_current")
+        // $("#s2hl"+current).addClass("s2hl_current")
+        // $("#con_re"+current).addClass("represent_current")
         $("#s1h4_"+current).addClass("represent_current")
         $("#t_city"+current).addClass("represent_current")
         $("#p1-"+current).addClass("represent_current")
@@ -126,9 +169,92 @@ $(document).ready(function () {
             $(".c").css("fill",circlecolor[current-1])
         }
 
+        
+        new TimelineMax()
+        .to(".svg_citycross", 0.5, {
+            y: "30px",scaleX:0.95, scaleY:0.95,opacity:"0"
+        })
+        .to(".svg_citycross", 1, {
+            y: "0px",scaleX:1, scaleY:1,opacity:"1"
+        })
+
+        new TimelineMax()
+        .to("#city"+current, 0, {
+            opacity:"0"
+        })
+        .to("#city"+current, 0.5, {
+            delay:0.75,
+            opacity:"1",ease:"power2.in"
+        })
+        let citytext_anim = new TimelineMax()
+        .to("#t_city"+current, 0, {
+            opacity:"0"
+        })
+        .to("#t_city"+current, 0.5, {
+            delay:1.1,
+            opacity:"1",ease:"power2.in"
+        })
+
+        citytext_anim.eventCallback("onComplete",cityfinish)
+
+      
+            let sec2_anim=new TimelineMax()
+            .addLabel("label0","+=0")
+            .to("#represent"+current, 0.5, {
+                opacity:"1",ease:"power2.in"
+            })
+            .to("#represent_s_"+current, 0.5, {
+                opacity:"1",ease:"power2.in"
+            })
+            .to("#con_re"+current, 0.5, {
+                opacity:"1",ease:"power2.in"
+            },"label0+=0.5")
+            .addLabel("label1","+=0")
+            .to("#s2hl"+current, 0.75, {
+                x:"0",opacity:"1",ease:"power2.in-out"
+            })
+            .staggerTo([".ar_s2l-2",".ar_s2l-1"], 0.5, {
+                delay:0,
+                opacity:"1",ease:"power2.in"
+            })
+            .to(".ar_s2r", 1.25, {
+                x:"0",opacity:"1",ease:"power2.in-out"
+            },"label1-=0.25")
+
+            scrollse2.setTween(sec2_anim).addIndicators().addTo(controller).reverse(true);
+    
+
+        
+
     })
 
     $('#btn_left').click(function () {
+
+        TweenLite.to("#s2hl"+current, 0, {
+            x:"-100%",opacity:"0"
+        })
+        
+        if(document.body.clientWidth <= 768){
+            TweenLite.to(".ar_s2r", 0, {
+                x:"-200%",opacity:"0"
+            })
+        }
+        else{
+            TweenLite.to(".ar_s2r", 0, {
+                x:"100%",opacity:"0"
+            })
+        }
+
+        $(".ar_s2l-1").css("opacity","0")
+        $(".ar_s2l-2").css("opacity","0")
+        $("#s2hl"+current).css("opacity","0")
+        $(".con_btns1").css("display","none")
+        $("#s2hl"+current).css("opacity","0")
+        $("#con_re"+current).css("opacity","0")
+        $("#represent"+current).css("opacity","0")
+        $("#represent_s_"+current).css("opacity","0")
+        $("#city"+current).css("opacity","0")
+        $("#t_city"+current).css("opacity","0")
 
         //change
         $("#city"+current).removeClass("city_current")
@@ -148,11 +274,11 @@ $(document).ready(function () {
         $("#city"+current).addClass("city_current")
         $("#ttbox"+current).addClass("tbox_current")
         $("#tbbox"+current).addClass("tbox_current")
-        $("#represent"+current).addClass("represent_current")
-        $("#represent_s_"+current).addClass("represent_current")
+        // $("#represent"+current).addClass("represent_current")
+        // $("#represent_s_"+current).addClass("represent_current")
         $("#t_bg"+current).addClass("t_current")
-        $("#s2hl"+current).addClass("s2hl_current")
-        $("#con_re"+current).addClass("represent_current")
+        // $("#s2hl"+current).addClass("s2hl_current")
+        // $("#con_re"+current).addClass("represent_current")
         $("#s1h4_"+current).addClass("represent_current")
         $("#t_city"+current).addClass("represent_current")
         $("#p1-"+current).addClass("represent_current")
@@ -221,16 +347,77 @@ $(document).ready(function () {
             $("#t_nav"+k).removeClass("t_nav_anim1")
             $("#t_nav"+k).addClass("t_nav_anim3")
         }
+
+        
+        new TimelineMax()
+        .to(".svg_citycross", 0.5, {
+            y: "30px",scaleX:0.95, scaleY:0.95,opacity:"0"
+        })
+        .to(".svg_citycross", 1, {
+            y: "0px",scaleX:1, scaleY:1,opacity:"1"
+        })
+
+        new TimelineMax()
+        .to("#city"+current, 0, {
+            opacity:"0"
+        })
+        .to("#city"+current, 0.5, {
+            delay:0.75,
+            opacity:"1",ease:"power2.in"
+        })
+        let citytext_anim = new TimelineMax()
+        .to("#t_city"+current, 0, {
+            opacity:"0"
+        })
+        .to("#t_city"+current, 0.5, {
+            delay:1.1,
+            opacity:"1",ease:"power2.in"
+        })
+
+        citytext_anim.eventCallback("onComplete",cityfinish)
+
+        let sec2_anim=new TimelineMax()
+        .addLabel("label0","+=0")
+        .to("#represent"+current, 0.5, {
+            opacity:"1",ease:"power2.in"
+        })
+        .to("#represent_s_"+current, 0.5, {
+            opacity:"1",ease:"power2.in"
+        })
+        .to("#con_re"+current, 0.5, {
+            opacity:"1",ease:"power2.in"
+        },"label0+=0.5")
+        .addLabel("label1","+=0")
+        .to("#s2hl"+current, 0.75, {
+            x:"0",opacity:"1",ease:"power2.in-out"
+        })
+        .staggerTo([".ar_s2l-2",".ar_s2l-1"], 0.5, {
+            delay:0,
+            opacity:"1",ease:"power2.in"
+        })
+        .to(".ar_s2r", 1.25, {
+            x:"0",opacity:"1",ease:"power2.in-out"
+        },"label1-=0.25")
+
+        scrollse2.setTween(sec2_anim).addIndicators().addTo(controller).reverse(true);
     })
 
     //music
     var audio = []
-    for (var i = 0; i < 14; i++) {
+    for (var i = 0; i < 14; i+=3) {
         audio[i] = new Audio('../Maroon 5 - Sugar_cut.mp3')
+        audio[i+1] = new Audio('../think.mp3')
+        audio[i+2] = new Audio('../havana.mp3')
     }
 
 
     $('#btn_play1').click(function () {
+        audio[1].load()
+        $('#btn_play2').css("display", "block")
+        $('#btn_pause2').css("display", "none")
+        audio[2].load()
+        $('#btn_play3').css("display", "block")
+        $('#btn_pause3').css("display", "none")
         audio[0].play()
         $('#btn_pause1').css("display", "block")
         $('#btn_play1').css("display", "none")
@@ -242,6 +429,12 @@ $(document).ready(function () {
     })
 
     $('#btn_play2').click(function () {
+        audio[0].load()
+        $('#btn_play1').css("display", "block")
+        $('#btn_pause1').css("display", "none")
+        audio[2].load()
+        $('#btn_play3').css("display", "block")
+        $('#btn_pause3').css("display", "none")
         audio[1].play()
         $('#btn_pause2').css("display", "block")
         $('#btn_play2').css("display", "none")
@@ -253,6 +446,12 @@ $(document).ready(function () {
     })
 
     $('#btn_play3').click(function () {
+        audio[1].load()
+        $('#btn_play2').css("display", "block")
+        $('#btn_pause2').css("display", "none")
+        audio[0].load()
+        $('#btn_play1').css("display", "block")
+        $('#btn_pause1').css("display", "none")
         audio[2].play()
         $('#btn_pause3').css("display", "block")
         $('#btn_play3').css("display", "none")
@@ -263,136 +462,105 @@ $(document).ready(function () {
         $('#btn_pause3').css("display", "none")
     })
 
-    // $('#btn_play4').click(function () {
-    //     audio[3].play()
-    //     $('#btn_pause4').css("display", "block")
-    //     $('#btn_play4').css("display", "none")
-    // })
-    // $('#btn_pause4').click(function () {
-    //     audio[3].pause()
-    //     $('#btn_play4').css("display", "block")
-    //     $('#btn_pause4').css("display", "none")
-    // })
 
-    // $('#btn_play5').click(function () {
-    //     audio[4].play()
-    //     $('#btn_pause5').css("display", "block")
-    //     $('#btn_play5').css("display", "none")
-    // })
-    // $('#btn_pause5').click(function () {
-    //     audio[4].pause()
-    //     $('#btn_play5').css("display", "block")
-    //     $('#btn_pause5').css("display", "none")
-    // })
+    ///////////////////////////////////// ScrollMagic
+	var controller = new ScrollMagic.Controller();
+	var controller1 = new ScrollMagic.Controller();
 
-    // $('#btn_play6').click(function () {
-    //     audio[5].play()
-    //     $('#btn_pause6').css("display", "block")
-    //     $('#btn_play6').css("display", "none")
-    // })
-    // $('#btn_pause6').click(function () {
-    //     audio[5].pause()
-    //     $('#btn_play6').css("display", "block")
-    //     $('#btn_pause6').css("display", "none")
-    // })
+    let sec1_anim=new TimelineMax()
+    .to(".con_s1headline", 0.5, {
+        opacity:"1"
+    })
+    .to(".box_s1c", 0.5, {
+        opacity:"0.4"
+    })
+    .to(".svg_citycross", 0.5, {
+        y: "30px",scaleX:0.95, scaleY:0.95,opacity:"0"
+    })
+    .addLabel("label2","+=0")
+    .to(".svg_citycross", 1, {
+        y: "0px",scaleX:1, scaleY:1,opacity:"1"
+    })
+    .to("#city1", 0, {
+        opacity:"0"
+    },"label2+=0.25")
+    .to("#city1", 0.5, {
+        opacity:"1",ease:"power2.in"
+    },"label2+=0.25")
+    .to("#t_city1", 0, {
+        opacity:"0"
+    },"label2+=0.6")
+    .to("#t_city1", 0.5, {
+        opacity:"1",ease:"power2.in"
+    },"label2+=0.6")
 
-    // $('#btn_play7').click(function () {
-    //     audio[6].play()
-    //     $('#btn_pause7').css("display", "block")
-    //     $('#btn_play7').css("display", "none")
-    // })
-    // $('#btn_pause7').click(function () {
-    //     audio[6].pause()
-    //     $('#btn_play7').css("display", "block")
-    //     $('#btn_pause7').css("display", "none")
-    // })
+    new ScrollMagic.Scene({
+		triggerElement: '#section1',
+        offset: 300,
+    }).setTween(sec1_anim).addIndicators().addTo(controller).reverse(false);
 
-    // $('#btn_play8').click(function () {
-    //     audio[7].play()
-    //     $('#btn_pause8').css("display", "block")
-    //     $('#btn_play8').css("display", "none")
-    // })
-    // $('#btn_pause8').click(function () {
-    //     audio[7].pause()
-    //     $('#btn_play8').css("display", "block")
-    //     $('#btn_pause8').css("display", "none")
-    // })
 
-    // $('#btn_play9').click(function () {
-    //     audio[8].play()
-    //     $('#btn_pause9').css("display", "block")
-    //     $('#btn_play9').css("display", "none")
-    // })
-    // $('#btn_pause9').click(function () {
-    //     audio[8].pause()
-    //     $('#btn_play9').css("display", "block")
-    //     $('#btn_pause9').css("display", "none")
-    // })
+    let sec2_anim
+    let scrollse2
 
-    // $('#btn_play10').click(function () {
-    //     audio[9].play()
-    //     $('#btn_pause10').css("display", "block")
-    //     $('#btn_play10').css("display", "none")
-    // })
-    // $('#btn_pause10').click(function () {
-    //     audio[9].pause()
-    //     $('#btn_play10').css("display", "block")
-    //     $('#btn_pause10').css("display", "none")
-    // })
+if(document.body.clientWidth <= 768){
+        sec2_anim=new TimelineMax()
+        .addLabel("label0","+=0")
+        .to("#represent"+current, 0.5, {
+            opacity:"1",ease:"power2.in"
+        })
+        .to("#represent_s_"+current, 0.5, {
+            opacity:"1",ease:"power2.in"
+        })
+        .to("#con_re"+current, 0.5, {
+            opacity:"1",ease:"power2.in"
+        },"label0+=0.5")
+        .addLabel("label1","+=0")
+        .to("#s2hl"+current, 0.75, {
+            x:"0",opacity:"1",ease:"power2.in-out"
+        })
+        .staggerTo([".ar_s2l-2",".ar_s2l-1"], 0.5, {
+            delay:0,
+            opacity:"1",ease:"power2.in"
+        })
+        .to(".ar_s2r", 1.25, {
+            x:"0",opacity:"1",ease:"power2.in-out"
+        },"label1-=0.25")
+        scrollse2= new ScrollMagic.Scene({
+            triggerElement: '#section2',
+            offset: 250,
+        }).setTween(sec2_anim).addIndicators().addTo(controller).reverse(true);
+    }
+    else{
+        sec2_anim=new TimelineMax()
+        .addLabel("label0","+=0")
+        .to("#represent"+current, 0.5, {
+            opacity:"1",ease:"power2.in"
+        })
+        .to("#represent_s_"+current, 0.5, {
+            opacity:"1",ease:"power2.in"
+        })
+        .to("#con_re"+current, 0.5, {
+            opacity:"1",ease:"power2.in"
+        },"label0+=0.5")
+        .addLabel("label1","+=0")
+        .to("#s2hl"+current, 0.75, {
+            x:"0",opacity:"1",ease:"power2.in-out"
+        })
+        .staggerTo([".ar_s2l-2",".ar_s2l-1"], 0.5, {
+            delay:0,
+            opacity:"1",ease:"power2.in"
+        })
+        .to(".ar_s2r", 1.25, {
+            x:"0",opacity:"1",ease:"power2.in-out"
+        },"label1-=0.25")
+        scrollse2= new ScrollMagic.Scene({
+            triggerElement: '#section2',
+            offset: 100,
+        }).setTween(sec2_anim).addIndicators().addTo(controller).reverse(true);
+    }
 
-    // $('#btn_play11').click(function () {
-    //     audio[10].play()
-    //     $('#btn_pause11').css("display", "block")
-    //     $('#btn_play11').css("display", "none")
-    // })
-    // $('#btn_pause11').click(function () {
-    //     audio[10].pause()
-    //     $('#btn_play11').css("display", "block")
-    //     $('#btn_pause11').css("display", "none")
-    // })
+    sec1_anim.eventCallback("onComplete",cityfinish)
 
-    // $('#btn_play12').click(function () {
-    //     audio[11].play()
-    //     $('#btn_pause12').css("display", "block")
-    //     $('#btn_play12').css("display", "none")
-    // })
-    // $('#btn_pause12').click(function () {
-    //     audio[11].pause()
-    //     $('#btn_play12').css("display", "block")
-    //     $('#btn_pause12').css("display", "none")
-    // })
-
-    // $('#btn_play13').click(function () {
-    //     audio[12].play()
-    //     $('#btn_pause13').css("display", "block")
-    //     $('#btn_play13').css("display", "none")
-    // })
-    // $('#btn_pause13').click(function () {
-    //     audio[12].pause()
-    //     $('#btn_play13').css("display", "block")
-    //     $('#btn_pause13').css("display", "none")
-    // })
-
-    // $('#btn_play14').click(function () {
-    //     audio[13].play()
-    //     $('#btn_pause14').css("display", "block")
-    //     $('#btn_play14').css("display", "none")
-    // })
-    // $('#btn_pause14').click(function () {
-    //     audio[13].pause()
-    //     $('#btn_play14').css("display", "block")
-    //     $('#btn_pause14').css("display", "none")
-    // })
-
-    // $('#btn_play15').click(function () {
-    //     audio[14].play()
-    //     $('#btn_pause15').css("display", "block")
-    //     $('#btn_play15').css("display", "none")
-    // })
-    // $('#btn_pause15').click(function () {
-    //     audio[14].pause()
-    //     $('#btn_play15').css("display", "block")
-    //     $('#btn_pause15').css("display", "none")
-    // })
 
 })
