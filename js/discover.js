@@ -65,9 +65,29 @@ $(document).ready(function () {
     ///////////////////////////////////// ScrollMagic
 	var controller = new ScrollMagic.Controller();
 
-    new ScrollMagic.Scene({
-        triggerElement: '#section1',
-        offset: 450, duration: 2500
-    }).setClassToggle('.con_scroll','fixed').addTo(controller).reverse(true);
+    if(document.body.clientWidth <= 320){
+        new ScrollMagic.Scene({
+            triggerElement: '#section1',
+            offset: 450, duration: 2400
+        }).setClassToggle('.con_scroll','fixed').addTo(controller).reverse(true);
+    }
+    else if(document.body.clientWidth <= 768){
+        new ScrollMagic.Scene({
+            triggerElement: '#section1',
+            offset: 450, duration: 2200
+        }).setClassToggle('.con_scroll','fixed').addTo(controller).reverse(true);
+    }
+    else{
+        new ScrollMagic.Scene({
+            triggerElement: '#section1',
+            offset: 450, duration: 2500
+        }).setClassToggle('.con_scroll','fixed').addTo(controller).reverse(true);
+    }
+
+    $('.scrolldown').click(function () {
+        new TimelineMax()
+        .to('.ul_s',0.75,{ opacity: "1"})
+        console.log("click")
+    })
 
 })
