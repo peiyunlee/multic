@@ -6,7 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Multic</title>
+    <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <script src="js/scrollmagic/uncompressed/ScrollMagic.js"></script>
+    <script src="js/scrollmagic/minified/ScrollMagic.min.js"></script>
+    <script src="js/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+
+    <script src="js/home.js"></script>
 </head>
 
 <body>
@@ -28,7 +38,7 @@
                     <ul>
                         <li>
                             <div class="box_li"></div>
-                            <a href="">INTRO</a>
+                            <a href="pages/intro.html">INTRO</a>
                         </li>
                         <li>
                             <div class="box_li"></div>
@@ -40,14 +50,22 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="con_audio">
+                <div class="con_link">
+                    <a class="a_link" href="">
+                        <img class="img_link" src="../image/home/icon_fb.png" alt="">
+                    </a>
+                    <a class="a_link" href="">
+                        <img class="img_link" src="../image/home/icon_ins.png" alt="">
+                    </a>
+                </div>
+                <!-- <div class="con_audio">
                     <div class="con_aucontroller">
                         <div class="t_on on_current">ON</div>
                         <div class="h_line"></div>
                         <div class="t_off">OFF</div>
                     </div>
                     <img class="img_music" src="image/home/music.png" alt="">
-                </div>
+                </div> -->
             </div>
             <div class="con_hcenter">
                 <img class="img_linede img_rlinede" src="image/home/linede.png" alt="">
@@ -62,9 +80,9 @@
                 <img class="img_linede img_llinede" src="image/home/linede.png" alt="">
             </div>
             <img class="img_wave" src="image/home/wave.png" alt="">
-            <img class="img_harrow" src="image/home/arrow.png" alt="">
+            <img id="btn_hscroll" class="img_harrow" src="image/home/arrow.png" alt="">
         </header>
-        <section class="section1">
+        <section id="section1" class="section1">
             <div class="bg_triangle"></div>
             <!-- 音樂介紹連結 -->
             <div class="con_htop">
@@ -75,7 +93,7 @@
                     <ul>
                         <li>
                             <div class="box_li"></div>
-                            <a href="">INTRO</a>
+                            <a href="pages/intro.html">INTRO</a>
                         </li>
                         <li>
                             <div class="box_li"></div>
@@ -87,62 +105,117 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="con_audio">
+                <div class="con_link">
+                    <a class="a_link" href="">
+                        <img class="img_link" src="../image/home/icon_fb.png" alt="">
+                    </a>
+                    <a class="a_link" href="">
+                        <img class="img_link" src="../image/home/icon_ins.png" alt="">
+                    </a>
+                </div>
+                <!-- <div class="con_audio">
                     <div class="con_aucontroller">
                         <div class="t_on on_current">ON</div>
                         <div class="h_line"></div>
                         <div class="t_off">OFF</div>
                     </div>
                     <img class="img_music" src="image/home/music.png" alt="">
-                </div>
+                </div> -->
             </div>
             <article class="ar_ls1">
                 <ul>
                     <li>
-                        <div class="box_li list_current"></div>
-                        <button class="btn_li">POP</button>
+                        <div id="li1" class="box_li list_current"></div>
+                        <div class="btn_li">POP</div>
                     </li>
                     <li>
-                        <div class="box_li"></div>
-                        <button class="btn_li">ROCK</button>
+                        <div id="li2" class="box_li"></div>
+                        <div class="btn_li">ROCK</div>
                     </li>
                     <li>
-                        <div class="box_li"></div>
-                        <button class="btn_li">COUNTRY</button>
+                        <div id="li3" class="box_li"></div>
+                        <div class="btn_li">COUNTRY</div>
                     </li>
                     <li>
-                        <div class="box_li"></div>
-                        <button class="btn_li">HIPHOP</button>
+                        <div id="li4" class="box_li"></div>
+                        <div class="btn_li">HIPHOP</div>
                     </li>
                     <li>
-                        <div class="box_li"></div>
-                        <button class="btn_li">EDM</button>
+                        <div id="li5" class="box_li"></div>
+                        <div class="btn_li">EDM</div>
                     </li>
                 </ul>
-                <div class="con_lcontents1">
+                <div id="content1" class="con_lcontents1 positionab c_current">
                     <h3>POP MUSIC INTRO</h3>
                     <p class="t_ls1">
-                        流行樂(Pop music)特指歌詞內容主要以現代潮流為主，敘述愛情或生活的音樂。
+                        流行樂(Pop music)是流行音樂(Popular music)的其中一個音樂類型，雖然兩者為同義詞，但流行樂(Pop music)指的是狹義的音樂類型，流行音樂(Popular
+                        music)泛指所有大眾傳媒廣泛傳播的音樂。
                     </p>
-                    <button class="btn_more">MORE</button>
+                    <a href="pages/intro.html" class="btn_more">MORE</a>
+                </div>
+                <div id="content2" class="con_lcontents1 positionab">
+                    <h3>ROCK MUSIC INTRO</h3>
+                    <p class="t_ls1">
+                        搖滾樂(rock music)是20世紀50年代初起源於搖滾(rock and roll)音樂中的一種廣泛音樂類型，並在20世紀60年代後期，特別是在英國和美國發展成為一系列不同的風格。
+                    </p>
+                    <a href="pages/intro.html" class="btn_more">MORE</a>
+                </div>
+                <div id="content3" class="con_lcontents1 positionab">
+                    <h3>COUNTRY MUSIC INTRO</h3>
+                    <p class="t_ls1">
+                        鄉村音樂，也稱為鄉村與西部（Country and
+                        Western）或簡稱為鄉村，是一種當代的流行音樂。鄉村音樂的根源可追溯至1920年代，融合了傳統民謠音樂、凱爾特音樂、福音音樂、藍調及美國民間音樂。
+                    </p>
+                    <a href="pages/intro.html" class="btn_more">MORE</a>
+                </div>
+                <div id="content4" class="con_lcontents1 positionab">
+                    <h3>HIPHOP MUSIC INTRO</h3>
+                    <p class="t_ls1">
+                        嘻哈（Hip hop），是1970年代源自紐約市南布朗克斯與哈林區的非洲裔及拉丁裔青年之間的一種邊緣性次文化，繼而發展壯大成為新興藝術型態。
+                    </p>
+                    <a href="pages/intro.html" class="btn_more">MORE</a>
+                </div>
+                <div id="content5" class="con_lcontents1">
+                    <h3>EDM MUSIC INTRO</h3>
+                    <p class="t_ls1">
+                        電子舞曲（Electronic Dance
+                        Music，簡稱為EDM），是一種主要與舞蹈相關的娛樂活動中播放所製作的電子音樂，但很多也是當作流行樂出品或將流行曲當做素材，與流行舞曲、電子流行、合成器流行有著密不可分的關係。
+                    </p>
+                    <a href="pages/intro.html" class="btn_more">MORE</a>
                 </div>
             </article>
             <article class="ar_rs1">
-                <img class="img_city" src="image/home/city_pop.png" alt="">
-                <div class="t_pop">POP MUSIC</div>
-                <div class="t_city">CITY</div>
+                <img id="city1" class="img_city city_current" src="image/home/city_pop.png" alt="">
+                <img id="city2" class="img_city" src="image/home/city_rock.png" alt="">
+                <img id="city3" class="img_city" src="image/home/city_country.png" alt="">
+                <img id="city4" class="img_city" src="image/home/city_hiphop.png" alt="">
+                <img id="city5" class="img_city" src="image/home/city_edm.png" alt="">
+                <div class="con_tcity">
+                    <div id="tcm1" class="t_citymusic positionab tcm_current">POP MUSIC</div>
+                    <div id="tcm2" class="t_citymusic positionab">ROCK MUSIC</div>
+                    <div id="tcm3" class="t_citymusic positionab">COUNTRY MUSIC</div>
+                    <div id="tcm4" class="t_citymusic positionab">HIPHOP MUSIC</div>
+                    <div id="tcm5" class="t_citymusic">EDM MUSIC</div>
+                    <div class="t_city">CITY</div>
+                </div>
+
             </article class="ar_ls1">
             <div class="con_btns1">
                 <button class="btn_ls1">
-                    <img class="img_btns1" src="image/home/btn_l.png" alt="">
+                    <img id="btn_left" class="img_btns1" src="image/home/btn_l.png" alt="">
                 </button>
                 <button class="btn_rs1">
-                    <img class="img_btns1" src="image/home/btn_r.png" alt="">
+                    <img id="btn_right" class="img_btns1" src="image/home/btn_r.png" alt="">
                 </button>
             </div>
-        </section>
-        <!-- <footer></footer> -->
+        </section id="btn_hscroll">
+        <footer>
+            <div class="t_footer">Multic Production team</div>
+        </footer>
     </div>
+
+    <!-- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script> -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 </body>
 
 </html>
