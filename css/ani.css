@@ -16,24 +16,6 @@ body {
     right: 0;
 }
 
-.load {
-    position: absolute;
-    display: flex;
-    z-index: 1;
-    width: 100vw;
-    height: 100%;
-    background-color: #000;
-}
-
-.loadani {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    overflow: hidden;
-    top: 40%;
-    left: 44.5%;
-}
-
 .lottie {
     background-color: #000;
     width: 100%;
