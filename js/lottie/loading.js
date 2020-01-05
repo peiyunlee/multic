@@ -13,9 +13,9 @@ $(document).ready(function() {
     openingAnim.addEventListener('DOMLoaded', loopanimate);
 
     function loopanimate() {
-        openingAnim.playSegments([0, 41], true);
+        openingAnim.play();
     }
-    document.onload = function() {
+    window.onload = function() {
         openingAnim.playSegments([0, 41], true);
         $('#load').css('display', 'none');
     };
