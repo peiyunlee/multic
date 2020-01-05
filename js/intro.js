@@ -563,5 +563,37 @@ if(document.body.clientWidth <= 768){
 
     sec1_anim.eventCallback("onComplete",cityfinish)
 
+    
+	// var cityScene = new ScrollMagic.Scene({
+	// 	triggerElement: "#section1",
+	// 	offset: 100,
+	// }).addTo(controller);
 
+	// cityScene.on("enter", function (event) {
+
+	// 	//rock with mouse move
+	// 	var rect = $('#section1')[0].getBoundingClientRect();
+	// 	var mouse = { x: 0, y: 0, moved: false };
+	// 	$("#section1").mousemove(function (e) {
+	// 		mouse.moved = true;
+	// 		mouse.x = e.clientX - rect.left;
+	// 		mouse.y = e.clientY - rect.top;
+	// 	});
+	// 	TweenLite.ticker.addEventListener('tick', function () {
+	// 		if (mouse.moved) {
+	// 			parallaxIt(".con_s1content", -150);
+	// 		}
+	// 		mouse.moved = false;
+	// 	});
+	// 	function parallaxIt(target, movement) {
+	// 		TweenMax.to(target, 0.3, {
+	// 			x: (mouse.x - rect.width / 2) / rect.width * movement - rect.width / 2.5,
+	// 			y: (mouse.y - rect.height / 2) / rect.height * movement - rect.height / 6
+	// 		});
+	// 	}
+	// 	$(window).on('resize scroll', function(){
+	// 		rect = $('#section1')[0].getBoundingClientRect();
+	// 	  })
+    // });
+    
 })
