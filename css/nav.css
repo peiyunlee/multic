@@ -35,14 +35,14 @@ button {
 
 .a_logo {
     cursor: pointer;
-    width: 70px;
-    height: 70px;
+    width: 90px;
+    height: 90px;
 }
 
-.img_logo {
+/* .img_logo {
     cursor: pointer;
     width: 70px;
-}
+} */
 
 
 /* .img_music{
@@ -161,9 +161,12 @@ nav li:hover>.box_li {
         display: block;
         margin-right: 20px;
     } */
-    .img_logo {
+    .a_logo {
         width: 65px;
     }
+    /* .img_logo {
+        width: 65px;
+    } */
     /* .con_aucontroller{
         display: none;
     } */
@@ -175,9 +178,12 @@ nav li:hover>.box_li {
         margin: 0 2.3vw;
         font-size: 18px;
     }
-    .img_logo {
+    .a_logo {
         width: 60px;
     }
+    /* .img_logo {
+        width: 60px;
+    } */
     .con_link {
         width: 9vw;
         min-width: 62px;
@@ -204,18 +210,24 @@ nav li:hover>.box_li {
     .con_htop {
         padding: 0 7vw;
     }
-    .img_logo {
+    .a_logo {
         width: 55px;
     }
+    /* .img_logo {
+        width: 55px;
+    } */
 }
 
 @media screen and (max-width:320px) {
     .con_htop {
-        height: 125px;
+        height: 100px;
     }
-    .img_logo {
+    /* .a_logo {
         width: 40px;
-    }
+    } */
+    /* .img_logo {
+        width: 40px;
+    } */
 }
 
 .con_htop {
@@ -224,14 +236,147 @@ nav li:hover>.box_li {
     animation: showup1 0.75s ease-in-out 0.25s 1;
     animation-fill-mode: forwards;
 }
+@keyframes showup1{
+    from{transform: translateY(-100%);opacity: 0;}
+    to{transform: translateY(0%);opacity: 1;}
+}
 
-@keyframes showup1 {
-    from {
-        transform: translateY(-100%);
+
+
+.con_navbar{
+    display: none;
+}
+.s_nav{
+    display: none;
+}
+@media screen and (max-width:320px){
+    
+    .l_nav{
+        display: none;
+    }
+    .s_nav{
+        display: block;
+    }
+    .con_navbar{
+        position: absolute;
+        top:40px;
+        right:25px;
+        width: 35px;
+        height: 20px;
+        display: block;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 35px;
+    }
+    .con_navbar2{
+        top:45px;
+    }
+    input{
+        width: 35px;
+        height: 20px;
+        position: absolute;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 100;
+    }
+    
+    span
+    {
+        display: block;
+        width: 35px;
+        height: 5px;
+        position: relative;
+        background: #fff;
+        transform-origin: 15%;
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                    opacity 0.55s ease;
+    }
+    
+    #hamberger1:checked ~ span
+    {
+        opacity: 1;
+        transform: rotate(45deg) translate(-3px, -3px);
+        background-color: #fff;
+    }
+    #hamberger1:checked ~ span:nth-last-child(1)
+    {
+      transform: rotate(-45deg) translate(2px, -1px);
+    }
+    #hamberger2:checked ~ span
+    {
+        opacity: 1;
+        transform: rotate(45deg) translate(-3px, -3px);
+        background-color: #fff;
+    }
+    #hamberger2:checked ~ span:nth-last-child(1)
+    {
+      transform: rotate(-45deg) translate(2px, -1px);
+    }
+    .s_nav{
+        position: fixed;
+        align-self: flex-start;
+        display: grid;
+        align-content: center;
+        grid-template-columns: 100%;
+        grid-template-rows: 320px 2px 35px;
+        grid-row-gap: 30px;
+        top:1.5vh;
+        left:4vw;
+        height: 97vh;
+        width: 92vw;
+        z-index: 100;
+        background-image: url(../image/home/Rectangle\ 176@2x.png);
+        background-size: cover;
+        padding: 0 15px;
+        display: none;
         opacity: 0;
     }
-    to {
-        transform: translateY(0%);
-        opacity: 1;
+    .line_sn{
+        border-top:2px solid #fff;
+        margin: 0 30px;
     }
+    .con_sntop{
+        position: relative;
+        height: 280px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    .con_sntop ul{
+        display: flex;
+        margin: 0 30px;
+        height: 200px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 18px;
+        letter-spacing: 3px;
+        font-weight: 400;
+    }
+    
+    .img_navlinede{
+        position: absolute;
+        width: 15px;
+    }
+    .img_rnavlinede{
+        top:0;
+        right: 0;
+    }
+    .img_lnavlinede{
+        left: 0;
+        bottom: 0;
+    }
+    .con_snlink{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .con_snlink .a_link{
+        margin: 0 15px 
+    }
+
 }

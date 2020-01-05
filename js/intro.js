@@ -221,7 +221,7 @@ $(document).ready(function () {
                 x:"0",opacity:"1",ease:"power2.in-out"
             },"label1-=0.25")
 
-            scrollse2.setTween(sec2_anim).addIndicators().addTo(controller).reverse(true);
+            scrollse2.setTween(sec2_anim).addTo(controller).reverse(true);
     
 
         
@@ -399,7 +399,7 @@ $(document).ready(function () {
             x:"0",opacity:"1",ease:"power2.in-out"
         },"label1-=0.25")
 
-        scrollse2.setTween(sec2_anim).addIndicators().addTo(controller).reverse(true);
+        scrollse2.setTween(sec2_anim).addTo(controller).reverse(true);
     })
 
     //music
@@ -497,7 +497,7 @@ $(document).ready(function () {
     new ScrollMagic.Scene({
 		triggerElement: '#section1',
         offset: 300,
-    }).setTween(sec1_anim).addIndicators().addTo(controller).reverse(false);
+    }).setTween(sec1_anim).addTo(controller).reverse(false);
 
 
     let sec2_anim
@@ -529,7 +529,7 @@ if(document.body.clientWidth <= 768){
         scrollse2= new ScrollMagic.Scene({
             triggerElement: '#section2',
             offset: 250,
-        }).setTween(sec2_anim).addIndicators().addTo(controller).reverse(true);
+        }).setTween(sec2_anim).addTo(controller).reverse(true);
     }
     else{
         sec2_anim=new TimelineMax()
@@ -557,7 +557,7 @@ if(document.body.clientWidth <= 768){
         scrollse2= new ScrollMagic.Scene({
             triggerElement: '#section2',
             offset: 100,
-        }).setTween(sec2_anim).addIndicators().addTo(controller).reverse(true);
+        }).setTween(sec2_anim).addTo(controller).reverse(true);
     }
 
     sec1_anim.eventCallback("onComplete",cityfinish)
