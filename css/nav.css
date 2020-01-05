@@ -36,10 +36,13 @@ button{
     width: 70px;
     height: 70px;
 }
-.img_logo{
+
+/* .img_logo {
     cursor: pointer;
     width: 70px;
-}
+} */
+
+
 /* .img_music{
     width: 40px;
 } */
@@ -148,9 +151,12 @@ nav li:hover > .box_li{
         display: block;
         margin-right: 20px;
     } */
-    .img_logo{
+    .a_logo {
         width: 65px;
     }
+    /* .img_logo {
+        width: 65px;
+    } */
     /* .con_aucontroller{
         display: none;
     } */
@@ -163,10 +169,13 @@ nav li:hover > .box_li{
         margin: 0 2.3vw;
         font-size: 18px;
     }
-    .img_logo{
+    .a_logo {
         width: 60px;
     }
-    .con_link{
+    /* .img_logo {
+        width: 60px;
+    } */
+    .con_link {
         width: 9vw;
         min-width: 62px;
     }
@@ -192,18 +201,24 @@ nav li:hover > .box_li{
     .con_htop{
         padding: 0 7vw;
     }
-    .img_logo{
+    .a_logo {
         width: 55px;
     }
+    /* .img_logo {
+        width: 55px;
+    } */
 }
 
-@media screen and (max-width:320px){
-    .con_htop{
-        height: 125px;
+@media screen and (max-width:320px) {
+    .con_htop {
+        height: 100px;
     }
-    .img_logo{
+    /* .a_logo {
         width: 40px;
-    }
+    } */
+    /* .img_logo {
+        width: 40px;
+    } */
 }
 
 
@@ -236,7 +251,7 @@ nav li:hover > .box_li{
     }
     .con_navbar{
         position: absolute;
-        top:35px;
+        top:40px;
         right:25px;
         width: 35px;
         height: 20px;

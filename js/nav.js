@@ -38,6 +38,9 @@ $(document).ready(function () {
         TweenLite.to(".con_htop", 0 , {
             opacity:"0",display:"none"
         })
+        TweenLite.to("#a_logo", 0 , {
+            opacity:"0"
+        })
     }
     else{
         $('#con_navbar2').css("position",'absolute');
@@ -49,6 +52,9 @@ $(document).ready(function () {
         })
         TweenLite.to(".con_htop", 0 , {
             opacity:"1",display:"flex"
+        })
+        TweenLite.to("#a_logo", 0 , {
+            opacity:"1"
         })
       j=0
     }
