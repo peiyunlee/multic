@@ -1,0 +1,16 @@
+html,
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+
+.loader {
+    width: 100%;
+    height: 50px;
+}
+
+.lottie {
+    width: 100%;
+}
