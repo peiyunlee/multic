@@ -6,7 +6,7 @@ $(document).ready(function() {
         loop: false,
         prerender: true,
         autoplay: true,
-        path: '../json/adblack.json'
+        path: './json/adblack.json'
     };
     // set bodymovin
     let openingAnim = bodymovin.loadAnimation(openingAnimData);

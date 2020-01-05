@@ -304,6 +304,7 @@ $(document).ready(function () {
         }
         if(document.body.clientWidth <=320){
             $(".t_s2scroll").css("color",bgcolor[current-1])
+            $('#btn_pause2').css("fill", bgcolor[current-1])
         }
         if(current == 1){
             $(".greenbox").css("fill","#08D9D6")
@@ -405,9 +406,9 @@ $(document).ready(function () {
     //music
     var audio = []
     for (var i = 0; i < 14; i+=3) {
-        audio[i] = new Audio('../Maroon 5 - Sugar_cut.mp3')
-        audio[i+1] = new Audio('../think.mp3')
-        audio[i+2] = new Audio('../havana.mp3')
+        audio[i] = new Audio('./Maroon 5 - Sugar_cut.mp3')
+        audio[i+1] = new Audio('./think.mp3')
+        audio[i+2] = new Audio('./havana.mp3')
     }
 
 
@@ -562,5 +563,37 @@ if(document.body.clientWidth <= 768){
 
     sec1_anim.eventCallback("onComplete",cityfinish)
 
+    
+	// var cityScene = new ScrollMagic.Scene({
+	// 	triggerElement: "#section1",
+	// 	offset: 100,
+	// }).addTo(controller);
 
+	// cityScene.on("enter", function (event) {
+
+	// 	//rock with mouse move
+	// 	var rect = $('#section1')[0].getBoundingClientRect();
+	// 	var mouse = { x: 0, y: 0, moved: false };
+	// 	$("#section1").mousemove(function (e) {
+	// 		mouse.moved = true;
+	// 		mouse.x = e.clientX - rect.left;
+	// 		mouse.y = e.clientY - rect.top;
+	// 	});
+	// 	TweenLite.ticker.addEventListener('tick', function () {
+	// 		if (mouse.moved) {
+	// 			parallaxIt(".con_s1content", -150);
+	// 		}
+	// 		mouse.moved = false;
+	// 	});
+	// 	function parallaxIt(target, movement) {
+	// 		TweenMax.to(target, 0.3, {
+	// 			x: (mouse.x - rect.width / 2) / rect.width * movement - rect.width / 2.5,
+	// 			y: (mouse.y - rect.height / 2) / rect.height * movement - rect.height / 6
+	// 		});
+	// 	}
+	// 	$(window).on('resize scroll', function(){
+	// 		rect = $('#section1')[0].getBoundingClientRect();
+	// 	  })
+    // });
+    
 })

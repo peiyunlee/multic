@@ -157,8 +157,9 @@ header{
 }
 .img_playbox{
     position: absolute;
-    width: 33.85vw;
-    min-width: 390px;
+    width: 50vw;
+    min-width: 600px;
+    margin-left: 2.5vw;
     z-index: 0;
 }
 .con_hccontent{
@@ -278,7 +279,7 @@ header{
         min-width: 215px;
     }
     .img_playbox{
-        width: 51vw;
+        width: 80vw;
         min-width: 180px;
     }
     .img_linede{
@@ -1577,6 +1578,9 @@ audio{
 @media screen and (max-width:320px){
     .img_playbox{
         transform: translate(400px,-400px);
+    }
+    #btn_pause1 rect{
+        fill:#FF5C85;
     }
 
 }

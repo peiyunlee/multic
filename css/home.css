@@ -47,6 +47,25 @@ header{
     height: 100%;
     z-index: -1;
 }
+.fall{
+    width: 1920px;
+}
+.img_dot{
+    position: absolute;
+    width: 90%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.img_dot_l{
+    display: block;
+}
+.img_dot_m{
+    display: none;
+}
+.img_dot_s{
+    display: none;
+}
 .img_rcircle{
     position: absolute;
     width: 12vw;
@@ -192,6 +211,30 @@ header{
 
 
 @media screen and (max-width:768px){
+    .fall{
+        position: absolute;
+        width: 1280px;
+        left: -30%;
+        top: 10%;
+        /* transform: translate(100%,100%); */
+    }
+    .img_dot{
+        position: absolute;
+        width: 1000px;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+    .img_dot_l{
+        display: none;
+    }
+    .img_dot_m{
+        display: block;
+        width: 80%;
+    }
+    .img_dot_s{
+        display: none;
+    }
     .t_hc{    
         font-size: 18px;
         font-weight: 200;
@@ -244,6 +287,30 @@ header{
 }
 
 @media screen and (max-width:320px){
+    .fall{
+        position: absolute;
+        width: 1000px;
+        left: -60%;
+        top: 5%;
+        /* transform: translate(100%,100%); */
+    }
+    .img_dot{
+        position: absolute;
+        width: 100%;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+    .img_dot_l{
+        display: none;
+    }
+    .img_dot_m{
+        display: none;
+    }
+    .img_dot_s{
+        display: block;
+        width: 80%;
+    }
     header{
         height: 812px;
     }

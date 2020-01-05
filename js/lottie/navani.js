@@ -6,7 +6,7 @@ $(document).ready(function() {
         loop: false,
         prerender: true,
         autoplay: false,
-        path: '../json/logani.json'
+        path: './json/logani.json'
     };
     // set bodymovin
     let openingAnim = bodymovin.loadAnimation(openingAnimData);
@@ -20,7 +20,7 @@ $(document).ready(function() {
         loop: false,
         prerender: true,
         autoplay: false,
-        path: '../json/logani.json'
+        path: './json/logani.json'
     };
     // set bodymovin
     let openingAnim1 = bodymovin.loadAnimation(openingAnimData1);
@@ -34,7 +34,7 @@ $(document).ready(function() {
         loop: false,
         prerender: true,
         autoplay: false,
-        path: '../json/logani.json'
+        path: './json/logani.json'
     };
     // set bodymovin
     let openingAnim2 = bodymovin.loadAnimation(openingAnimData2);
