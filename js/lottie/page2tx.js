@@ -3,11 +3,17 @@ $(document).ready(function() {
     let openingAnimData = {
         container: openingAnimWindow,
         animType: 'svg',
-        loop: true,
+        loop: 2,
         prerender: true,
         autoplay: true,
         path: './json/page2tx.json'
     };
     // set bodymovin
     let openingAnim = bodymovin.loadAnimation(openingAnimData);
+
+    // openingAnim.addEventListener('complete', loopanimate);
+
+    // function loopanimate() {
+    //     openingAnim.goToAndPlay(30900);
+    // }
 });
