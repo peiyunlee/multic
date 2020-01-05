@@ -27,4 +27,18 @@ $(document).ready(function() {
     var myVar1;
     myVar1 = setTimeout(function() { openingAnim1.play(); }, 750);
 
+    let openingAnimWindow2 = document.querySelector('#a_logo3');
+    let openingAnimData2 = {
+        container: openingAnimWindow2,
+        animType: 'svg',
+        loop: false,
+        prerender: true,
+        autoplay: false,
+        path: '../json/logani.json'
+    };
+    // set bodymovin
+    let openingAnim2 = bodymovin.loadAnimation(openingAnimData2);
+    var myVar2;
+    myVar2 = setTimeout(function() { openingAnim2.play(); }, 750);
+
 });
