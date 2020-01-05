@@ -39,6 +39,7 @@ button {
     height: 90px;
 }
 
+
 /* .img_logo {
     cursor: pointer;
     width: 70px;
@@ -236,31 +237,37 @@ nav li:hover>.box_li {
     animation: showup1 0.75s ease-in-out 0.25s 1;
     animation-fill-mode: forwards;
 }
-@keyframes showup1{
-    from{transform: translateY(-100%);opacity: 0;}
-    to{transform: translateY(0%);opacity: 1;}
+
+@keyframes showup1 {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
 }
 
-
-
-.con_navbar{
+.con_navbar {
     display: none;
 }
-.s_nav{
+
+.s_nav {
     display: none;
 }
-@media screen and (max-width:320px){
-    
-    .l_nav{
+
+@media screen and (max-width:320px) {
+    .l_nav {
         display: none;
     }
-    .s_nav{
+    .s_nav {
         display: block;
     }
-    .con_navbar{
+    .con_navbar {
         position: absolute;
-        top:40px;
-        right:25px;
+        top: 40px;
+        right: 25px;
         width: 35px;
         height: 20px;
         display: block;
@@ -271,10 +278,10 @@ nav li:hover>.box_li {
         align-items: center;
         margin-bottom: 35px;
     }
-    .con_navbar2{
-        top:45px;
+    .con_navbar2 {
+        top: 45px;
     }
-    input{
+    input {
         width: 35px;
         height: 20px;
         position: absolute;
@@ -282,40 +289,32 @@ nav li:hover>.box_li {
         opacity: 0;
         z-index: 100;
     }
-    
-    span
-    {
+    span {
         display: block;
         width: 35px;
         height: 5px;
         position: relative;
         background: #fff;
         transform-origin: 15%;
-        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                    opacity 0.55s ease;
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
     }
-    
-    #hamberger1:checked ~ span
-    {
+    #hamberger1:checked~span {
         opacity: 1;
         transform: rotate(45deg) translate(-3px, -3px);
         background-color: #fff;
     }
-    #hamberger1:checked ~ span:nth-last-child(1)
-    {
-      transform: rotate(-45deg) translate(2px, -1px);
+    #hamberger1:checked~span:nth-last-child(1) {
+        transform: rotate(-45deg) translate(2px, -1px);
     }
-    #hamberger2:checked ~ span
-    {
+    #hamberger2:checked~span {
         opacity: 1;
         transform: rotate(45deg) translate(-3px, -3px);
         background-color: #fff;
     }
-    #hamberger2:checked ~ span:nth-last-child(1)
-    {
-      transform: rotate(-45deg) translate(2px, -1px);
+    #hamberger2:checked~span:nth-last-child(1) {
+        transform: rotate(-45deg) translate(2px, -1px);
     }
-    .s_nav{
+    .s_nav {
         position: fixed;
         align-self: flex-start;
         display: grid;
@@ -323,8 +322,8 @@ nav li:hover>.box_li {
         grid-template-columns: 100%;
         grid-template-rows: 320px 2px 35px;
         grid-row-gap: 30px;
-        top:1.5vh;
-        left:4vw;
+        top: 1.5vh;
+        left: 4vw;
         height: 97vh;
         width: 92vw;
         z-index: 100;
@@ -334,11 +333,11 @@ nav li:hover>.box_li {
         display: none;
         opacity: 0;
     }
-    .line_sn{
-        border-top:2px solid #fff;
+    .line_sn {
+        border-top: 2px solid #fff;
         margin: 0 30px;
     }
-    .con_sntop{
+    .con_sntop {
         position: relative;
         height: 280px;
         display: flex;
@@ -346,7 +345,7 @@ nav li:hover>.box_li {
         align-items: center;
         margin-bottom: 40px;
     }
-    .con_sntop ul{
+    .con_sntop ul {
         display: flex;
         margin: 0 30px;
         height: 200px;
@@ -357,26 +356,24 @@ nav li:hover>.box_li {
         letter-spacing: 3px;
         font-weight: 400;
     }
-    
-    .img_navlinede{
+    .img_navlinede {
         position: absolute;
         width: 15px;
     }
-    .img_rnavlinede{
-        top:0;
+    .img_rnavlinede {
+        top: 0;
         right: 0;
     }
-    .img_lnavlinede{
+    .img_lnavlinede {
         left: 0;
         bottom: 0;
     }
-    .con_snlink{
+    .con_snlink {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .con_snlink .a_link{
-        margin: 0 15px 
+    .con_snlink .a_link {
+        margin: 0 15px
     }
-
 }
