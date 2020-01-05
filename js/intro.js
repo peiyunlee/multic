@@ -405,9 +405,9 @@ $(document).ready(function () {
     //music
     var audio = []
     for (var i = 0; i < 14; i+=3) {
-        audio[i] = new Audio('../Maroon 5 - Sugar_cut.mp3')
-        audio[i+1] = new Audio('../think.mp3')
-        audio[i+2] = new Audio('../havana.mp3')
+        audio[i] = new Audio('./Maroon 5 - Sugar_cut.mp3')
+        audio[i+1] = new Audio('./think.mp3')
+        audio[i+2] = new Audio('./havana.mp3')
     }
 
 
