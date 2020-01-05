@@ -13,8 +13,7 @@ $(document).ready(function() {
     openingAnim.addEventListener('DOMLoaded', loopanimate);
 
     function loopanimate() {
-        console.log('3')
-        openingAnim.playSegments([0, 16], true);
+        openingAnim.playSegments([0, 41], true);
     }
     window.onload = function() {
         console.log(2)
