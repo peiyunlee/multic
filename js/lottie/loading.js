@@ -16,8 +16,8 @@ $(document).ready(function() {
         openingAnim.play();
     }
     window.onload = function() {
-        console.log('2')
-        openingAnim.playSegments([0, 41], true);
+        console.log(2)
+        openingAnim.play();
         $('#load').css('display', 'none');
     };
 });
