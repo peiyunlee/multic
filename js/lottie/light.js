@@ -6,7 +6,7 @@ $(document).ready(function() {
         loop: true,
         prerender: true,
         autoplay: true,
-        path: 'light.json'
+        path: './json/light.json'
     };
     // set bodymovin
     let openingAnim = bodymovin.loadAnimation(openingAnimData);
