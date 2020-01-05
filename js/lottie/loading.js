@@ -10,12 +10,12 @@ $(document).ready(function() {
     };
     // set bodymovin
     let openingAnim = bodymovin.loadAnimation(openingAnimData);
-    // openingAnim.addEventListener('DOMLoaded', loopanimate);
+    openingAnim.addEventListener('DOMLoaded', loopanimate);
 
-    // function loopanimate() {
-    //     console.log('3')
-    //     openingAnim.playSegments([0, 16], true);
-    // }
+    function loopanimate() {
+        console.log('3')
+        openingAnim.playSegments([0, 16], true);
+    }
     window.onload = function() {
         console.log(2)
         openingAnim.playSegments([0, 41], true);
