@@ -84,16 +84,16 @@ $(document).ready(function () {
         new ScrollMagic.Scene({
             triggerElement: '#section1',
             offset: 300,
-        }).setTween(city_anim).addIndicators().addTo(controller).reverse(false);
+        }).setTween(city_anim).addTo(controller).reverse(false);
         new ScrollMagic.Scene({
             triggerElement: '#section1',
             offset: 300,
-        }).setClassToggle('.t_ls1','p_anim').addIndicators().addTo(controller).reverse(false);
+        }).setClassToggle('.t_ls1','p_anim').addTo(controller).reverse(false);
         
         new ScrollMagic.Scene({
             triggerElement: '#section1',
             offset: 300,
-        }).setClassToggle('.con_lcontents1_h3','hl_anim').addIndicators().addTo(controller).reverse(false);
+        }).setClassToggle('.con_lcontents1_h3','hl_anim').addTo(controller).reverse(false);
     }
     
     
