@@ -6,7 +6,7 @@ $(document).ready(function() {
         loop: true,
         prerender: true,
         autoplay: false,
-        path: '../json/cirlogo.json'
+        path: '../json/cubeloading.json'
     };
     // set bodymovin
     let openingAnim = bodymovin.loadAnimation(openingAnimData);
