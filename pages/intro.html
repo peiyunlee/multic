@@ -15,11 +15,14 @@
     <script src="../js/scrollmagic/uncompressed/ScrollMagic.js"></script>
     <script src="../js/scrollmagic/minified/ScrollMagic.min.js"></script>
     <script src="../js/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.8/lottie.js"></script>
 
     <script src="../js/gsap/gsap.min.js"></script>
     <script src="../js/gsap/animation.gsap.min.js"></script>
     <script src="../js/gsap/TimelineMax.min.js"></script>
 
+    <script src="../js/nav.js"></script>
+    <script src="../js/lottie/navani.js"></script>
     <script src="../js/intro.js"></script>
 </head>
 
@@ -52,9 +55,9 @@
                 <img class="img_hgreenbox img_hlgreenbox" src="../image/intro/green.png" alt="">
                 <img class="img_hgreenbox img_hrgreenbox" src="../image/intro/green.png" alt="">
             </div>
-            <div class="con_htop">
-                <a class="a_logo" href="../index.html">
-                    <img class="img_logo" src="../image/home/nav_logo.png" alt="">
+            <div id="con_htop " class="con_htop">
+                <a id="a_logo" class="a_logo" href="../index.html">
+                    <!-- <img class="img_logo" src="../image/home/nav_logo.png" alt=""> -->
                 </a>
                 <nav>
                     <ul>
@@ -64,7 +67,7 @@
                         </li>
                         <li>
                             <div class="box_li"></div>
-                            <a href="">DISCOVER</a>
+                            <a href="discover.html">DISCOVER</a>
                         </li>
                         <li>
                             <div class="box_li"></div>
@@ -81,12 +84,45 @@
                     </a>
                 </div>
             </div>
+            <div id="s_nav1" class="s_nav">
+                <div class="con_sntop">
+                    <ul>
+                        <img class="img_navlinede img_rnavlinede" src="../image/home/linede.png" alt="">
+                        <li>
+                            <div class="box_li"></div>
+                            <a href="intro.html">INTRO</a>
+                        </li>
+                        <li>
+                            <div class="box_li"></div>
+                            <a href="discover.html">DISCOVER</a>
+                        </li>
+                        <li>
+                            <div class="box_li"></div>
+                            <a href="">LISTEN</a>
+                        </li>
+                    </ul>
+                    <img class="img_navlinede img_lnavlinede" src="../image/home/linede.png" alt="">
+                </div>
+                <div class="line_sn"></div>
+                <div class="con_snlink">
+                    <a class="a_link" href="">
+                        <img class="img_link" src="../image/home/icon_fb.png" alt="">
+                    </a>
+                    <a class="a_link" href="">
+                        <img class="img_link" src="../image/home/icon_ins.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div id="con_navbar1" class="con_navbar">
+                <input id="hamberger1" class="hamberger1" type="checkbox">
+                <span></span>
+                <span></span>
+            </div>
             <img id="btn_hscroll" class="img_harrow" src="../image/home/arrow.png" alt="">
         </header>
         <section id="section1" class="section1">
             <div class="con_htop">
-                <a class="a_logo" href="../index.html">
-                    <img class="img_logo" src="../image/home/nav_logo.png" alt="">
+                <a id="a_logo2" class="a_logo" href="../index.html">
                 </a>
                 <nav>
                     <ul>
@@ -96,7 +132,7 @@
                         </li>
                         <li>
                             <div class="box_li"></div>
-                            <a href="">DISCOVER</a>
+                            <a href="discover.html">DISCOVER</a>
                         </li>
                         <li>
                             <div class="box_li"></div>
@@ -212,12 +248,44 @@
                     <img id="btn_right" class="img_btns1" src="../image/home/btn_r.png" alt="">
                 </button>
             </div>
+            <div id="s_nav2" class="s_nav">
+                <div class="con_sntop">
+                    <ul>
+                        <img class="img_navlinede img_rnavlinede" src="../image/home/linede.png" alt="">
+                        <li>
+                            <div class="box_li"></div>
+                            <a href="intro.html">INTRO</a>
+                        </li>
+                        <li>
+                            <div class="box_li"></div>
+                            <a href="discover.html">DISCOVER</a>
+                        </li>
+                        <li>
+                            <div class="box_li"></div>
+                            <a href="">LISTEN</a>
+                        </li>
+                    </ul>
+                    <img class="img_navlinede img_lnavlinede" src="../image/home/linede.png" alt="">
+                </div>
+                <div class="line_sn"></div>
+                <div class="con_snlink">
+                    <a class="a_link" href="">
+                        <img class="img_link" src="../image/home/icon_fb.png" alt="">
+                    </a>
+                    <a class="a_link" href="">
+                        <img class="img_link" src="../image/home/icon_ins.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div id="con_navbar2" class="con_navbar">
+                <input id="hamberger2" class="hamberger2" type="checkbox">
+                <span></span>
+                <span></span>
+            </div>
         </section>
         <section id="section2" class="section2">
             <div class="con_htop">
-                <a class="a_logo" href="../index.html">
-                    <img class="img_logo" src="../image/home/nav_logo.png" alt="">
-                </a>
+                <a id="a_logo3" class="a_logo" href="../index.html"></a>
             </div>
             <div class="box_s2bg"></div>
             <div id="t_bg1" class="t_bg t_current">POP</div>
