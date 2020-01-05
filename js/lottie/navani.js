@@ -20,7 +20,7 @@ $(document).ready(function() {
         loop: false,
         prerender: true,
         autoplay: false,
-        path: '../json/logani.json'
+        path: './json/logani.json'
     };
     // set bodymovin
     let openingAnim1 = bodymovin.loadAnimation(openingAnimData1);
