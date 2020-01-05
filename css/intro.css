@@ -1579,6 +1579,9 @@ audio{
     .img_playbox{
         transform: translate(400px,-400px);
     }
+    #btn_pause1 rect{
+        fill:#FF5C85;
+    }
 
 }
 .img_cbg,.con_genre,.con_hccontent,.img_topcg,.img_crossgroup{

@@ -304,6 +304,7 @@ $(document).ready(function () {
         }
         if(document.body.clientWidth <=320){
             $(".t_s2scroll").css("color",bgcolor[current-1])
+            $('#btn_pause2').css("fill", bgcolor[current-1])
         }
         if(current == 1){
             $(".greenbox").css("fill","#08D9D6")
