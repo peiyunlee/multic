@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    let openingAnimWindow = document.querySelector('#lottie');
+    let openingAnimWindow = document.querySelector('#fall');
     let openingAnimData = {
         container: openingAnimWindow,
         animType: 'svg',
