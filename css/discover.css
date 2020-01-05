@@ -346,6 +346,9 @@ section{
 .fixed{
     position: fixed;
 }
+.absolute{
+    position: absolute;
+}
 .t_scroll{
     color: #9479CA;
     font-size: 20px;
@@ -598,10 +601,27 @@ section{
     .ar_s1 .ul_s{
         display: block;
         position: absolute;
-        border: 1px solid red;
-        width: 100%;
+        width: 110%;
+        left: -5%;
         background-color: #fff;
         opacity: 0;
+        box-shadow: 0px 6px 12px rgba(0,0,0,0.16);
+        margin-top: 10px;
+        padding: 10px 0 ;
+    }
+    .ar_s1 .ul_s li{
+        align-items: flex-start;
+        padding: 5px 0 5px 17.5px;
+        color: #32315F;
+        font-size: 18px;
+        letter-spacing: 4px;
+        font-weight: 600;
+        background-color: #fff;
+        position: relative;
+        z-index: 2;
+    }
+    .ar_s1 .ul_s li:active{
+        background-color: #eeeeee;
     }
     .li_current{
         width: 100%;
@@ -634,7 +654,17 @@ section{
         justify-self: flex-start;
         transition: all .2s;
     }
+    .con_scrolldown{
+        position: relative;
+        display: flex;
+    }
+    .scrolldown{
+        position: absolute;
+        z-index: 1;
+    }
     .scrollup{
-        display: none;
+        opacity: 0;
+        transform: rotate(180deg);
+        z-index: 0;
     }
 }
