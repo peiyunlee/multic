@@ -3,7 +3,7 @@ $(document).ready(function() {
     let openingAnimData = {
         container: openingAnimWindow,
         animType: 'svg',
-        loop: 2,
+        loop: 3,
         prerender: true,
         autoplay: true,
         path: './json/page2tx.json'
