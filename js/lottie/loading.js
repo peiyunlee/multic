@@ -13,7 +13,7 @@ $(document).ready(function() {
     openingAnim.addEventListener('data_ready', loopanimate);
 
     function loopanimate() {
-        openingAnim.playSegments([0, 16], true);
+        openingAnim.playSegments([0, 16], false);
         console.log(1)
     }
     window.onload = function() {
@@ -23,8 +23,8 @@ $(document).ready(function() {
 
     function animate() {
         console.log(3)
-        openingAnim.addEventListener('complete', animatend);
         openingAnim.playSegments([0, 41], true);
+        openingAnim.addEventListener('complete', animatend);
 
         function animatend() {
             console.log(4)
