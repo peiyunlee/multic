@@ -977,7 +977,7 @@ section{
     height: 100%;
     display: grid;
     grid-template-rows: 100%;
-    grid-template-columns: auto 432px 528px;
+    grid-template-columns: 50vw auto 528px;
 }
 .con_s2article > article{
     position: relative;
