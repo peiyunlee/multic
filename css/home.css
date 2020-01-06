@@ -674,7 +674,8 @@ section{
 
 .img_wave{
     transform: translateY(100%);
-    animation: showup2 0.75s ease-in-out 0.25s 1;
+    /* 0.25s */
+    animation: showup2 0.75s ease-in-out 1.45s 1;
     animation-fill-mode: forwards;
 }
 .city_current{

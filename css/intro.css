@@ -1588,7 +1588,7 @@ audio{
     opacity: 0;
 }
 .img_cbg,.box_s1c{
-    animation: cbgmove 1s linear 0s infinite alternate-reverse;
+    animation: cbgmove 1s linear 1.2s infinite alternate-reverse;
 }
 
 

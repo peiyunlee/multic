@@ -557,15 +557,18 @@ section{
 
 .img_lcross{
     transform: translateX(-150px);
-    animation: lcross 1s ease-in-out 1.5s 1 forwards;
+    /* 1.5 */
+    animation: lcross 1s ease-in-out 2.7s 1 forwards;
 }
 .img_rcross{
     transform: translateX(150px);
-    animation: rcross 1s ease-in-out 1.5s 1 forwards;
+    /* 1.5 */
+    animation: rcross 1s ease-in-out 2.7s 1 forwards;
 }
 .t_discover{
     opacity: 0;
-    animation: t_showup 1s ease-in-out 1s 1 forwards;
+    /* 1 */
+    animation: t_showup 1s ease-in-out 2.2s 1 forwards;
 }
 
 /* animation */

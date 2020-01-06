@@ -37,13 +37,15 @@ $(document).ready(function() {
         // let seccolor = ["#08D9D6","#000000","#DFE780","#ED6900","#00FF01"]
 
     // //anim
-    TweenLite.to(".img_playbox", 2, { ease: "power2.in", y: "0px", x: "0px", opacity: "1" });
-
-    TweenLite.to(".img_cbg", 0.3, { delay: 2.5, ease: "none", opacity: "1" });
-    TweenLite.to(".con_hccontent", 0.25, { delay: 1.75, ease: "none", opacity: "1" });
-    TweenLite.to(".con_genre", 0.3, { delay: 2, ease: "power1.in", opacity: "1" });
-    TweenLite.to(".img_crossgroup", 0.3, { delay: 2, ease: "power1.in", opacity: "1" });
-    TweenLite.to(".img_topcg", 0.3, { delay: 2, ease: "power1.in", opacity: "1" });
+    TweenLite.to(".img_playbox", 2, { delay:1.2,ease: "power2.in", y: "0px", x: "0px", opacity: "1" });
+    // 2.5
+    TweenLite.to(".img_cbg", 0.3, { delay: 2.7, ease: "none", opacity: "1" });
+    // 1.75
+    TweenLite.to(".con_hccontent", 0.25, { delay: 1.95, ease: "none", opacity: "1" });
+    // 2
+    TweenLite.to(".con_genre", 0.3, { delay: 3.2, ease: "power1.in", opacity: "1" });
+    TweenLite.to(".img_crossgroup", 0.3, { delay: 3.2, ease: "power1.in", opacity: "1" });
+    TweenLite.to(".img_topcg", 0.3, { delay: 3.2, ease: "power1.in", opacity: "1" });
 
 
 

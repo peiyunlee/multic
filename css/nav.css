@@ -234,7 +234,8 @@ nav li:hover>.box_li {
 .con_htop {
     opacity: 0;
     transform: translateY(0%);
-    animation: showup1 0.75s ease-in-out 0.25s 1;
+    /* 0.25s */
+    animation: showup1 0.75s ease-in-out 1.45s 1;
     animation-fill-mode: forwards;
 }
 
