@@ -3,7 +3,7 @@ $(document).ready(function() {
     let openingAnimData = {
         container: openingAnimWindow,
         animType: 'svg',
-        loop: false,
+        loop: true,
         prerender: true,
         autoplay: false,
         path: 'https://assets2.lottiefiles.com/packages/lf20_SJ8Jxv.json'
@@ -23,6 +23,7 @@ $(document).ready(function() {
 
     function animate() {
         console.log(3)
+        openingAnim.loop = false;
         openingAnim.playSegments([0, 41], true);
         openingAnim.addEventListener('complete', animatend);
 
