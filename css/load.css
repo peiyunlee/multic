@@ -1,6 +1,6 @@
 .load {
-    position: fixed;
     display: flex;
+    position: fixed;
     z-index: 999;
     width: 100vw;
     height: 100%;
@@ -8,21 +8,30 @@
     transition: all 0.5s;
 }
 
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
 .loadani {
-    position: fixed;
     width: 200px;
     height: 200px;
     overflow: hidden;
-    top: 40%;
-    left: 44.5%;
+    justify-content: center;
+    align-items: center;
     transition: all 0.5s;
 }
 
 .logoworld {
-    position: fixed;
+    width: 200px;
     font-size: 23px;
     color: #fff;
-    top: 64%;
-    left: 47.3%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
     letter-spacing: 10px;
 }
