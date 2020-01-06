@@ -1,5 +1,5 @@
 .load {
-    position: absolute;
+    position: fixed;
     display: flex;
     z-index: 999;
     width: 100vw;
@@ -9,7 +9,7 @@
 }
 
 .loadani {
-    position: absolute;
+    position: fixed;
     width: 200px;
     height: 200px;
     overflow: hidden;
