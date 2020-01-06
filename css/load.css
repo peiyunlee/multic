@@ -4,8 +4,8 @@
     z-index: 999;
     width: 100vw;
     height: 100%;
-    background-color: #722A6B;
-    transition: 1s;
+    background-color: rgba(66, 31, 96, 0.5);
+    transition: all 0.5s;
 }
 
 .loadani {
@@ -15,4 +15,5 @@
     overflow: hidden;
     top: 40%;
     left: 44.5%;
+    transition: all 0.5s;
 }

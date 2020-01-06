@@ -10,7 +10,7 @@ $(document).ready(function() {
     };
     // set bodymovin
     let openingAnim = bodymovin.loadAnimation(openingAnimData);
-    openingAnim.addEventListener('DOMLoaded', loopanimate);
+    openingAnim.addEventListener('data_ready', loopanimate);
 
     function loopanimate() {
         openingAnim.playSegments([0, 16], true);
@@ -28,8 +28,8 @@ $(document).ready(function() {
 
         function animatend() {
             console.log(4)
-            $('#load').css('display', 'none');
+            $('#load').css('opacity', '0');
+            $('#load').css('z-index', '-999');
         }
-
     }
 });
