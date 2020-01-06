@@ -35,3 +35,14 @@
     margin-top: 10px;
     letter-spacing: 10px;
 }
+
+@media screen and (max-width:480px) {
+    .loadani {
+        width: 100px;
+        height: 100px;
+    }
+    .logoworld {
+        width: 100px;
+        font-size: 13px;
+    }
+}
