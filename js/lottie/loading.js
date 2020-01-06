@@ -3,7 +3,7 @@ $(document).ready(function() {
     let openingAnimData = {
         container: openingAnimWindow,
         animType: 'svg',
-        loop: false,
+        loop: true,
         prerender: true,
         autoplay: false,
         path: 'https://assets2.lottiefiles.com/packages/lf20_SJ8Jxv.json'
@@ -13,23 +13,26 @@ $(document).ready(function() {
     openingAnim.addEventListener('data_ready', loopanimate);
 
     function loopanimate() {
-        openingAnim.playSegments([0, 16], false);
+        openingAnim.playSegments([0, 16], true);
         console.log(1)
     }
     window.onload = function() {
         console.log(2)
         animate();
+
+
     };
 
     function animate() {
         console.log(3)
+        openingAnim.loop = false;
         openingAnim.playSegments([0, 41], true);
         openingAnim.addEventListener('complete', animatend);
 
         function animatend() {
             console.log(4)
-            $('#load').css('opacity', '0');
-            $('#load').css('z-index', '-999');
+                // $('#load').css('opacity', '0');
+                // $('#load').css('z-index', '-999');
         }
     }
 });
