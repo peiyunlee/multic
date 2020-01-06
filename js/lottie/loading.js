@@ -3,21 +3,33 @@ $(document).ready(function() {
     let openingAnimData = {
         container: openingAnimWindow,
         animType: 'svg',
-        loop: true,
+        loop: false,
         prerender: true,
         autoplay: false,
-        path: 'https://assets9.lottiefiles.com/packages/lf20_NXiHkw.json'
+        path: 'https://assets2.lottiefiles.com/packages/lf20_SJ8Jxv.json'
     };
     // set bodymovin
     let openingAnim = bodymovin.loadAnimation(openingAnimData);
     openingAnim.addEventListener('DOMLoaded', loopanimate);
 
     function loopanimate() {
-        openingAnim.play();
+        openingAnim.playSegments([0, 16], true);
+        console.log(1)
     }
     window.onload = function() {
         console.log(2)
-        openingAnim.play();
-        $('#load').css('display', 'none');
+        animate();
     };
+
+    function animate() {
+        console.log(3)
+        openingAnim.addEventListener('complete', animatend);
+        openingAnim.playSegments([0, 41], true);
+
+        function animatend() {
+            console.log(4)
+            $('#load').css('display', 'none');
+        }
+
+    }
 });
