@@ -6,20 +6,31 @@ $(document).ready(function() {
         loop: true,
         prerender: true,
         autoplay: false,
-        path: '../json/cirlogo.json'
+        path: 'https://assets2.lottiefiles.com/packages/lf20_SJ8Jxv.json'
     };
     // set bodymovin
     let openingAnim = bodymovin.loadAnimation(openingAnimData);
-    // openingAnim.addEventListener('DOMLoaded', loopanimate);
+    openingAnim.addEventListener('data_ready', loopanimate);
 
-    // function loopanimate() {
-    //     console.log('3')
-    //     openingAnim.playSegments([0, 16], true);
-    // }
+    function loopanimate() {
+        openingAnim.playSegments([0, 16], false);
+        console.log(1)
+    }
     window.onload = function() {
         console.log(2)
-        openingAnim.playSegments([0, 41], true);
-        $('#load').css("display", "none");
-        $('#load').css("transition", "1s");
+        animate();
     };
+
+    function animate() {
+        console.log(3)
+        openingAnim.loop = false;
+        openingAnim.playSegments([0, 41], true);
+        openingAnim.addEventListener('complete', animatend);
+
+        function animatend() {
+            console.log(4)
+            $('#load').css('opacity', '0');
+            $('#load').css('z-index', '-999');
+        }
+    }
 });

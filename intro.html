@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/intro.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/load.css">
 
     <script src="js/jquery-3.4.1.min.js"></script>
 
@@ -26,10 +27,17 @@
     <script src="js/lottie/box.js"></script>
     <script src="js/lottie/page2tx.js"></script>
     <script src="js/intro.js"></script>
+    <script src="js/lottie/loading.js"></script>
 </head>
 
 <body>
     <div class="wrapper">
+        <div id="load" class="load">
+            <div class="center">
+                <div id="loadani" class="loadani"></div>
+                <div class="logoworld">Multic</div>
+            </div>
+        </div>
         <header>
             <img class="img_bg img_bg_l" src="image/intro/bg.png" alt="">
             <img class="img_bg img_bg_m" src="image/intro/Mask Group 10@2x.png" alt="">
@@ -45,7 +53,7 @@
                 <div class="t_genre">MUSIC GENRE</div>
                 <div class="t_hintro">Introduction</div>
             </div>
-            <div id="lottie4" class="img_topcg" ></div>
+            <div id="lottie4" class="img_topcg"></div>
             <img class="img_crossgroup" src="image/intro/crossgroup.png" alt="">
             <div class="con_hcenter">
                 <div class="con_hccontent">
@@ -54,7 +62,7 @@
                     <img class="img_linede img_llinede" src="image/home/linede.png" alt="">
                 </div>
                 <!-- <img class="img_playbox" src="image/intro/playbox.png" alt=""> -->
-                <div id="lottie3" class="img_playbox" ></div>
+                <div id="lottie3" class="img_playbox"></div>
                 <img class="img_hgreenbox img_hlgreenbox" src="image/intro/green.png" alt="">
                 <img class="img_hgreenbox img_hrgreenbox" src="image/intro/green.png" alt="">
             </div>
@@ -191,8 +199,7 @@
             <div class="box_s1c box_s1crt"></div>
             <div class="box_s1c box_s1crb"></div>
             <div class="con_s1headline">
-                <svg class="svg_s1greenbox svg_s1lgreenbox" xmlns="http://www.w3.org/2000/svg" width="83.317"
-                    height="83.317" viewBox="0 0 83.317 83.317">
+                <svg class="svg_s1greenbox svg_s1lgreenbox" xmlns="http://www.w3.org/2000/svg" width="83.317" height="83.317" viewBox="0 0 83.317 83.317">
                     <rect class="greenbox" data-name="Rectangle 144" width="91.092" height="26.736"
                         transform="translate(83.317 18.905) rotate(135)" fill="#08d9d6" />
                 </svg>
@@ -203,15 +210,13 @@
                     <h4 id="s1h4_4" class="s1h4 positionab">HIPHOP</h4>
                     <h4 id="s1h4_5" class="s1h4">EDM</h4>
                 </div>
-                <svg class="svg_s1greenbox svg_s1rgreenbox" xmlns="http://www.w3.org/2000/svg" width="83.317"
-                    height="83.317" viewBox="0 0 83.317 83.317">
+                <svg class="svg_s1greenbox svg_s1rgreenbox" xmlns="http://www.w3.org/2000/svg" width="83.317" height="83.317" viewBox="0 0 83.317 83.317">
                     <rect class="greenbox" data-name="Rectangle 144" width="91.092" height="26.736"
                         transform="translate(83.317 18.905) rotate(135)" fill="#08d9d6" />
                 </svg>
             </div>
             <div class="con_s1content">
-                <svg class="svg_citycross" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                    width="906.979" height="639.478" viewBox="0 0 906.979 639.478">
+                <svg class="svg_citycross" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="906.979" height="639.478" viewBox="0 0 906.979 639.478">
                     <defs>
                         <filter id="Union_13" x="0" y="0" width="906.979" height="639.478" filterUnits="userSpaceOnUse">
                             <feOffset dx="2" dy="41" input="SourceAlpha" />
@@ -240,8 +245,7 @@
             </div>
             <div class="con_scroll con_s1scroll">
                 <div class="t_scroll t_s1scroll">INTRODUCTION</div>
-                <img id="btn_sec1scroll" class="img_exclusion img_s1exclusion" src="image/intro/Exclusion.png"
-                    alt="">
+                <img id="btn_sec1scroll" class="img_exclusion img_s1exclusion" src="image/intro/Exclusion.png" alt="">
             </div>
             <div class="con_btns1">
                 <button class="btn_ls1">
@@ -296,8 +300,7 @@
             <div id="t_bg3" class="t_bg">COUNTRY</div>
             <div id="t_bg4" class="t_bg">HIPHOP</div>
             <div id="t_bg5" class="t_bg">EDM</div>
-            <svg class="svg_bgcross" xmlns="http://www.w3.org/2000/svg" width="316.728" height="316.728"
-                viewBox="0 0 316.728 316.728">
+            <svg class="svg_bgcross" xmlns="http://www.w3.org/2000/svg" width="316.728" height="316.728" viewBox="0 0 316.728 316.728">
                 <path class="bgcorss"
                     d="M158.364,231.607,73.243,316.728,0,243.485l85.121-85.121L0,73.243,73.243,0l85.121,85.121L243.485,0l73.243,73.243-85.121,85.121,85.121,85.121-73.243,73.243Z" />
             </svg>
@@ -316,8 +319,7 @@
                             POP
                             <div class="line_s2hl"></div>
                         </div>
-                        <svg class="svg_s2greenbox" xmlns="http://www.w3.org/2000/svg" width="83.317" height="83.317"
-                            viewBox="0 0 83.317 83.317">
+                        <svg class="svg_s2greenbox" xmlns="http://www.w3.org/2000/svg" width="83.317" height="83.317" viewBox="0 0 83.317 83.317">
                             <rect class="greenbox" data-name="Rectangle 144" width="91.092" height="26.736"
                                 transform="translate(83.317 18.905) rotate(135)" fill="#08d9d6" />
                         </svg>
@@ -327,8 +329,7 @@
                             ROCK
                             <div class="line_s2hl"></div>
                         </div>
-                        <svg class="svg_s2greenbox" xmlns="http://www.w3.org/2000/svg" width="83.317" height="83.317"
-                            viewBox="0 0 83.317 83.317">
+                        <svg class="svg_s2greenbox" xmlns="http://www.w3.org/2000/svg" width="83.317" height="83.317" viewBox="0 0 83.317 83.317">
                             <rect id="sec2greenbox" class="greenbox sec2greenbox2" data-name="Rectangle 144"
                                 width="91.092" height="26.736" transform="translate(83.317 18.905) rotate(135)"
                                 fill="#000000" />
@@ -339,8 +340,7 @@
                             COUNTRY
                             <div class="line_s2hl"></div>
                         </div>
-                        <svg class="svg_s2greenbox" xmlns="http://www.w3.org/2000/svg" width="83.317" height="83.317"
-                            viewBox="0 0 83.317 83.317">
+                        <svg class="svg_s2greenbox" xmlns="http://www.w3.org/2000/svg" width="83.317" height="83.317" viewBox="0 0 83.317 83.317">
                             <rect class="greenbox" data-name="Rectangle 144" width="91.092" height="26.736"
                                 transform="translate(83.317 18.905) rotate(135)" fill="#08d9d6" />
                         </svg>
@@ -350,8 +350,7 @@
                             HIP HOP
                             <div class="line_s2hl"></div>
                         </div>
-                        <svg class="svg_s2greenbox" xmlns="http://www.w3.org/2000/svg" width="83.317" height="83.317"
-                            viewBox="0 0 83.317 83.317">
+                        <svg class="svg_s2greenbox" xmlns="http://www.w3.org/2000/svg" width="83.317" height="83.317" viewBox="0 0 83.317 83.317">
                             <rect class="greenbox" data-name="Rectangle 144" width="91.092" height="26.736"
                                 transform="translate(83.317 18.905) rotate(135)" fill="#08d9d6" />
                         </svg>
@@ -361,16 +360,14 @@
                             EDM
                             <div class="line_s2hl"></div>
                         </div>
-                        <svg class="svg_s2greenbox" xmlns="http://www.w3.org/2000/svg" width="83.317" height="83.317"
-                            viewBox="0 0 83.317 83.317">
+                        <svg class="svg_s2greenbox" xmlns="http://www.w3.org/2000/svg" width="83.317" height="83.317" viewBox="0 0 83.317 83.317">
                             <rect class="greenbox" data-name="Rectangle 144" width="91.092" height="26.736"
                                 transform="translate(83.317 18.905) rotate(135)" fill="#08d9d6" />
                         </svg>
                     </div>
                     <article class="ar_s2l-1">
                         <div class="con_s2arlhl">
-                            <svg class="svg_s2hl1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" width="34" height="28" viewBox="0 0 34 28">
+                            <svg class="svg_s2hl1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34" height="28" viewBox="0 0 34 28">
                                 <defs>
                                     <style>
                                         .a {
@@ -429,8 +426,7 @@
                     </article>
                     <article class="ar_s2l-2">
                         <div class="con_s2arlhl">
-                            <svg class="svg_s2hl2" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" width="34" height="28" viewBox="0 0 34 28">
+                            <svg class="svg_s2hl2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34" height="28" viewBox="0 0 34 28">
                                 <defs>
                                     <clipPath id="clip-path">
                                         <rect id="Rectangle_223" data-name="Rectangle 223" width="34" height="28"
@@ -477,23 +473,16 @@
                     </article>
                 </article>
                 <article class="ar_s2c">
-                    <img id="represent1" class="img_represent img_represent_l represent_current"
-                        src="image/intro/p_pop.png" alt="">
-                    <img id="represent_s_1" class="img_represent img_represent_s represent_current"
-                        src="image/intro/Group 714@2x.png" alt="">
+                    <img id="represent1" class="img_represent img_represent_l represent_current" src="image/intro/p_pop.png" alt="">
+                    <img id="represent_s_1" class="img_represent img_represent_s represent_current" src="image/intro/Group 714@2x.png" alt="">
                     <img id="represent2" class="img_represent img_represent_l" src="image/intro/p_rock.png" alt="">
-                    <img id="represent_s_2" class="img_represent img_represent_s" src="image/intro/Group 715@2x.png"
-                        alt="">
-                    <img id="represent3" class="img_represent img_represent_l" src="image/intro/p_country.png"
-                        alt="">
-                    <img id="represent_s_3" class="img_represent img_represent_s" src="image/intro/Group 716@2x.png"
-                        alt="">
+                    <img id="represent_s_2" class="img_represent img_represent_s" src="image/intro/Group 715@2x.png" alt="">
+                    <img id="represent3" class="img_represent img_represent_l" src="image/intro/p_country.png" alt="">
+                    <img id="represent_s_3" class="img_represent img_represent_s" src="image/intro/Group 716@2x.png" alt="">
                     <img id="represent4" class="img_represent img_represent_l" src="image/intro/p_hh.png" alt="">
-                    <img id="represent_s_4" class="img_represent img_represent_s" src="image/intro/Group 717@2x.png"
-                        alt="">
+                    <img id="represent_s_4" class="img_represent img_represent_s" src="image/intro/Group 717@2x.png" alt="">
                     <img id="represent5" class="img_represent img_represent_l" src="image/intro/p_edm.png" alt="">
-                    <img id="represent_s_5" class="img_represent img_represent_s" src="image/intro/Group 718@2x.png"
-                        alt="">
+                    <img id="represent_s_5" class="img_represent img_represent_s" src="image/intro/Group 718@2x.png" alt="">
                     <div id="con_re1" class="con_represent positionab represent_current">
                         <div class="t_bigname">MAROON 5</div>
                         <div class="t_smallname">Adam Noah Levine</div>
@@ -518,13 +507,11 @@
                         <div class="con_music con_music_top">
                             <div class="t_number t_color1">01</div>
                             <div class="t_music t_color1">MAROON5-SURGAR</div>
-                            <svg id="btn_play1" class="svg_aucontrol btn_play" xmlns="http://www.w3.org/2000/svg"
-                                width="21" height="26" viewBox="0 0 21 26">
+                            <svg id="btn_play1" class="svg_aucontrol btn_play" xmlns="http://www.w3.org/2000/svg" width="21" height="26" viewBox="0 0 21 26">
                                 <path class="icon_color1" id="Polygon_2" data-name="Polygon 2" d="M13,0,26,21H0Z"
                                     transform="translate(21) rotate(90)" fill="#d33e40" />
                             </svg>
-                            <svg id="btn_pause1" class="svg_aucontrol btn_pause" xmlns="http://www.w3.org/2000/svg"
-                                width="20.5" height="25.073" viewBox="0 0 20.5 25.073">
+                            <svg id="btn_pause1" class="svg_aucontrol btn_pause" xmlns="http://www.w3.org/2000/svg" width="20.5" height="25.073" viewBox="0 0 20.5 25.073">
                                 <g id="Group_714" data-name="Group 714" transform="translate(-271 -727)">
                                     <rect class="icon_color1" id="Rectangle_222" data-name="Rectangle 222" width="6.308"
                                         height="25.073" transform="translate(271 727)" fill="#ff5c85" />
@@ -536,13 +523,11 @@
                         <div class="con_music">
                             <div class="t_number t_colorn">02</div>
                             <div class="t_music t_colorm">持修-正想著你呢</div>
-                            <svg id="btn_play2" class="svg_aucontrol btn_play" xmlns="http://www.w3.org/2000/svg"
-                                width="21" height="26" viewBox="0 0 21 26">
+                            <svg id="btn_play2" class="svg_aucontrol btn_play" xmlns="http://www.w3.org/2000/svg" width="21" height="26" viewBox="0 0 21 26">
                                 <path class="icon_color" id="Polygon_2" data-name="Polygon 2" d="M13,0,26,21H0Z"
                                     transform="translate(21) rotate(90)" fill="#d33e40" />
                             </svg>
-                            <svg id="btn_pause2" class="svg_aucontrol btn_pause" xmlns="http://www.w3.org/2000/svg"
-                                width="20.5" height="25.073" viewBox="0 0 20.5 25.073">
+                            <svg id="btn_pause2" class="svg_aucontrol btn_pause" xmlns="http://www.w3.org/2000/svg" width="20.5" height="25.073" viewBox="0 0 20.5 25.073">
                                 <g id="Group_714" data-name="Group 714" transform="translate(-271 -727)">
                                     <rect class="icon_color" id="Rectangle_222" data-name="Rectangle 222" width="6.308"
                                         height="25.073" transform="translate(271 727)" fill="#ff5c85" />
@@ -554,13 +539,11 @@
                         <div class="con_music">
                             <div class="t_number t_colorn">03</div>
                             <div class="t_music t_colorm">CAMILA-HAVANA</div>
-                            <svg id="btn_play3" class="svg_aucontrol btn_play" xmlns="http://www.w3.org/2000/svg"
-                                width="21" height="26" viewBox="0 0 21 26">
+                            <svg id="btn_play3" class="svg_aucontrol btn_play" xmlns="http://www.w3.org/2000/svg" width="21" height="26" viewBox="0 0 21 26">
                                 <path class="icon_color" id="Polygon_2" data-name="Polygon 2" d="M13,0,26,21H0Z"
                                     transform="translate(21) rotate(90)" fill="#d33e40" />
                             </svg>
-                            <svg id="btn_pause3" class="svg_aucontrol btn_pause" xmlns="http://www.w3.org/2000/svg"
-                                width="20.5" height="25.073" viewBox="0 0 20.5 25.073">
+                            <svg id="btn_pause3" class="svg_aucontrol btn_pause" xmlns="http://www.w3.org/2000/svg" width="20.5" height="25.073" viewBox="0 0 20.5 25.073">
                                 <g id="Group_714" data-name="Group 714" transform="translate(-271 -727)">
                                     <rect class="icon_color" id="Rectangle_222" data-name="Rectangle 222" width="6.308"
                                         height="25.073" transform="translate(271 727)" fill="#ff5c85" />
@@ -573,11 +556,9 @@
                 </article>
             </div>
             <div class="con_scroll con_s2scroll">
-                <img id="btn_sec2scroll" class="img_exclusion img_s2exclusion" src="image/intro/Exclusion.png"
-                    alt="">
+                <img id="btn_sec2scroll" class="img_exclusion img_s2exclusion" src="image/intro/Exclusion.png" alt="">
                 <div class="t_scroll t_s2scroll">TOP</div>
-                <svg id="btn_sec2scroll2" class="svg_exclusion" xmlns="http://www.w3.org/2000/svg" width="13"
-                    height="13" viewBox="0 0 13 13">
+                <svg id="btn_sec2scroll2" class="svg_exclusion" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13">
                     <path id="btn_s2scroll_s" data-name="Exclusion 1"
                         d="M13,13H0V0H13V13ZM2.583,3.836h0L1.492,5.286,6.567,9.1,11.6,5.281,10.5,3.837,6.561,6.83,2.583,3.836Z"
                         transform="translate(13 13) rotate(180)" fill="#ff5c85" />

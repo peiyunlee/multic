@@ -301,9 +301,9 @@ section{
     min-width: 576px;
     display: grid;
     justify-items: center;
-    grid-template-columns: repeat(3,264px) 266px;
+    grid-template-columns: repeat(4,1fr);
     grid-row-gap: 50px;
-    grid-column-gap: 74px;
+    grid-column-gap: auto;
     margin-top: 80px;
     display: none;
 }
@@ -311,7 +311,8 @@ section{
     display: grid;
 }
 .con_album{
-    width: 264px;
+    width: 13.75vw;
+    min-width: 160px;
 }
 .t_name{
     color: #32315F;
@@ -330,7 +331,8 @@ section{
     line-height: 27.5px;
 }
 .img_cover{
-    width: 265px;
+    width: 13.75vw;
+    min-width: 160px;
 }
 
 .con_scroll{
@@ -514,9 +516,11 @@ section{
     }
     .con_album{
         width: 106px;
+        min-width: auto;
     }
     .img_cover{
         width: 106px;
+        min-width: auto;
     }
     .t_name{
         color: #32315F;
@@ -553,15 +557,18 @@ section{
 
 .img_lcross{
     transform: translateX(-150px);
-    animation: lcross 1s ease-in-out 1.5s 1 forwards;
+    /* 1.5 */
+    animation: lcross 1s ease-in-out 2.7s 1 forwards;
 }
 .img_rcross{
     transform: translateX(150px);
-    animation: rcross 1s ease-in-out 1.5s 1 forwards;
+    /* 1.5 */
+    animation: rcross 1s ease-in-out 2.7s 1 forwards;
 }
 .t_discover{
     opacity: 0;
-    animation: t_showup 1s ease-in-out 1s 1 forwards;
+    /* 1 */
+    animation: t_showup 1s ease-in-out 2.2s 1 forwards;
 }
 
 /* animation */
