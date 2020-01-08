@@ -258,7 +258,7 @@ nav li:hover>.box_li {
     display: none;
 }
 
-@media screen and (max-width:320px) {
+@media screen and (max-width:480px) {
     .l_nav {
         display: none;
     }

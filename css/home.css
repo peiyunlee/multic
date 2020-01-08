@@ -454,6 +454,7 @@ section{
 }
 .c_current{
     opacity: 1;
+    z-index: 1;
 }
 .t_ls1{
     margin-top:40px;
