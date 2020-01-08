@@ -1741,14 +1741,14 @@ audio {
     .img_playbox {
         transform: translate(750px, -750px);
     }
+    #btn_pause1 rect {
+        fill: #FF5C85;
+    }
 }
 
 @media screen and (max-width:650px) {
     .img_playbox {
         transform: translate(400px, -400px);
-    }
-    #btn_pause1 rect {
-        fill: #FF5C85;
     }
 }
 
