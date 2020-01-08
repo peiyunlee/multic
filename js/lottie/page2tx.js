@@ -11,9 +11,4 @@ $(document).ready(function() {
     // set bodymovin
     let openingAnim = bodymovin.loadAnimation(openingAnimData);
 
-    // openingAnim.addEventListener('complete', loopanimate);
-
-    // function loopanimate() {
-    //     openingAnim.goToAndPlay(30900);
-    // }
 });

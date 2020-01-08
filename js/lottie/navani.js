@@ -11,7 +11,7 @@ $(document).ready(function() {
     // set bodymovin
     let openingAnim = bodymovin.loadAnimation(openingAnimData);
     var myVar;
-    myVar = setTimeout(function() { openingAnim.play(); }, 750);
+    myVar = setTimeout(function() { openingAnim.play(); }, 2400);
 
     let openingAnimWindow1 = document.querySelector('#a_logo2');
     let openingAnimData1 = {
@@ -25,7 +25,7 @@ $(document).ready(function() {
     // set bodymovin
     let openingAnim1 = bodymovin.loadAnimation(openingAnimData1);
     var myVar1;
-    myVar1 = setTimeout(function() { openingAnim1.play(); }, 750);
+    myVar1 = setTimeout(function() { openingAnim1.play(); }, 2400);
 
     let openingAnimWindow2 = document.querySelector('#a_logo3');
     let openingAnimData2 = {
@@ -39,6 +39,6 @@ $(document).ready(function() {
     // set bodymovin
     let openingAnim2 = bodymovin.loadAnimation(openingAnimData2);
     var myVar2;
-    myVar2 = setTimeout(function() { openingAnim2.play(); }, 750);
+    myVar2 = setTimeout(function() { openingAnim2.play(); }, 2400);
 
 });
